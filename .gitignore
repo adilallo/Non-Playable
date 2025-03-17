@@ -72,7 +72,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-
-# LLM Models
-/[Aa]ssets/[Ss]treamingAssets/undreamai-v1.2.3-llamacpp.meta
-/[Aa]ssets/[Ss]treamingAssets/undreamai-v1.2.3-llamacpp/*
