@@ -74,5 +74,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # LLM Models
-/[Aa]ssets/[Ss]treamingAssets/undreamai-v1.2.4-llamacpp.meta
-/[Aa]ssets/[Ss]treamingAssets/undreamai-v1.2.4-llamacpp/*
+/[Aa]ssets/[Ss]treamingAssets/undreamai-v1.2.5-llamacpp.meta
+/[Aa]ssets/[Ss]treamingAssets/undreamai-v1.2.5-llamacpp/*
