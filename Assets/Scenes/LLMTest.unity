@@ -599,6 +599,7 @@ MonoBehaviour:
   numPredict: -1
   slot: -1
   grammar: 
+  grammarJSON: 
   cachePrompt: 1
   seed: 0
   temperature: 1.1
@@ -655,6 +656,7 @@ MonoBehaviour:
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
+  grammarJSONString: 
 --- !u!1 &726528676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,7 +1571,7 @@ MonoBehaviour:
   remote: 0
   port: 13333
   numThreads: -1
-  numGPULayers: 40
+  numGPULayers: 20
   debug: 0
   parallelPrompts: -1
   dontDestroyOnLoad: 1
@@ -1579,7 +1581,7 @@ MonoBehaviour:
   chatTemplate: chatml
   lora: 
   loraWeights: 
-  flashAttention: 0
+  flashAttention: 1
   APIKey: 
   SSLCert: 
   SSLCertPath: 
@@ -2032,6 +2034,7 @@ MonoBehaviour:
   numPredict: 80
   slot: -1
   grammar: 
+  grammarJSON: 
   cachePrompt: 1
   seed: -1
   temperature: 1.2
@@ -2087,6 +2090,7 @@ MonoBehaviour:
     ["." | "!" | "?"]
 
 '
+  grammarJSONString: 
 --- !u!114 &1493015761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2102,6 +2106,11 @@ MonoBehaviour:
   minSentences: 2
   maxSentences: 5
   tokenCeiling: 80
+  bannedWords:
+  - Lacan
+  - lacan
+  - Lacanian
+  - Lacanism
 --- !u!1 &1609985808
 GameObject:
   m_ObjectHideFlags: 0
