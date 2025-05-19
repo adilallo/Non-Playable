@@ -8,7 +8,7 @@ namespace Storeroom.Goap.Sensors
     [GoapId("NavMeshWanderTargetSensor-0af7b2c8-a313-4f18-88f3-40c0702a81d9")]
     public class NavMeshWanderTargetSensor : LocalTargetSensorBase
     {
-        const float Radius = 6f;
+        const float Radius = 12f;
         const int MaxTries = 12;
         const float SampleDist = 1.5f;
 
