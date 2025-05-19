@@ -17,9 +17,10 @@ namespace Storeroom.Goap.Capabilities
 
             cap.AddAction<WanderAction>()
                .AddEffect<IsIdle>(EffectType.Increase)
-               .SetTarget<WanderTarget>();
+               .SetTarget<WanderTarget>()
+               .SetStoppingDistance(0.1f);
 
-            cap.AddTargetSensor<WanderTargetSensor>()
+            cap.AddTargetSensor<NavMeshWanderTargetSensor>()
                .SetTarget<WanderTarget>();
 
             return cap.Build();
