@@ -8,7 +8,9 @@ namespace Storeroom.Goap.Sensors
     [GoapId("NavMeshWanderTargetSensor-0af7b2c8-a313-4f18-88f3-40c0702a81d9")]
     public class NavMeshWanderTargetSensor : LocalTargetSensorBase
     {
-        const float Radius = 6f;           // wander radius around the agent
+        const float Radius = 6f;
+        const int MaxTries = 12;
+        const float SampleDist = 1.5f;
 
         public override void Created()
         {
@@ -19,18 +21,35 @@ namespace Storeroom.Goap.Sensors
                                       IComponentReference _,
                                       ITarget previous)
         {
-            var p2D = Random.insideUnitCircle * Radius;               // ⟵ 2-D, no Y jitter
-            var guess = agent.Transform.position + new Vector3(p2D.x, 0, p2D.y);
-
-            if (NavMesh.SamplePosition(guess, out var hit, 1.5f, NavMesh.AllAreas))
+            var origin = agent.Transform.position;
+            for (int i = 0; i < MaxTries; i++)
             {
-                var pos = hit.position;
-                return previous is PositionTarget pt ? pt.SetPosition(pos)
-                                                     : new PositionTarget(pos);
+                // pick a random point in XZ circle
+                var p2D = Random.insideUnitCircle * Radius;
+                var guess = origin + new Vector3(p2D.x, 0, p2D.y);
+
+                // snap to navmesh
+                if (!NavMesh.SamplePosition(guess, out var hit, SampleDist, NavMesh.AllAreas))
+                    continue;
+
+                // **ensure there is a complete path**
+                var path = new NavMeshPath();
+                if (NavMesh.CalculatePath(origin, hit.position, NavMesh.AllAreas, path) &&
+                    path.status == NavMeshPathStatus.PathComplete)
+                {
+                    // Reuse previous instance if possible
+                    if (previous is PositionTarget pt)
+                        return pt.SetPosition(hit.position);
+
+                    return new PositionTarget(hit.position);
+                }
             }
 
-            return previous is PositionTarget p ? p:
-                new PositionTarget(agent.Transform.position);
+            // Fallback: if we have a previous target, keep it; otherwise stay in place
+            if (previous is PositionTarget prevPt)
+                return prevPt;
+
+            return new PositionTarget(origin);
         }
 
         public override void Update()
