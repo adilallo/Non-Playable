@@ -164,6 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654ee4ac19c445e448d8848a3ca2dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _prompts: {fileID: 11400000, guid: c552857a94952e8458bf6ea2c641c767, type: 2}
+  _llm: {fileID: 0}
+  _thoughtText: {fileID: 0}
 --- !u!195 &6925402585902769161
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -35,11 +35,9 @@ namespace Storeroom.Goap
 
         void OnTarget(ITarget t, bool inRange)
         {
-            Debug.Log($"[NavMeshMover] OnTarget fired. dest={t?.Position}, inRange={inRange}");
             if (t == null) { nav.ResetPath(); return; }
             ResumeAgent();
             nav.SetDestination(t.Position);
-            Debug.Log($"hasPath={nav.hasPath}  pathPending={nav.pathPending}  status={nav.pathStatus}  remainingDistance={nav.remainingDistance}");
             nav.isStopped = inRange;
         }
 
