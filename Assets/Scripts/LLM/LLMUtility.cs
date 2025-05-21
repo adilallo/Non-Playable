@@ -6,13 +6,17 @@ namespace Storeroom.LLM
     [DefaultExecutionOrder(-1000)]
     public class LLMUtility : MonoBehaviour
     {
+        static bool IsServiceReady(LLMCharacter c) =>
+    c != null && c.llm != null && c.llm.started && !c.llm.failed;
+
         void OnDisable() => CancelAll();
         void OnApplicationQuit() => CancelAll();
 
         static void CancelAll()
         {
             foreach (var llmChar in FindObjectsOfType<LLMCharacter>())
-                llmChar.CancelRequests();
+                if (IsServiceReady(llmChar))
+                    llmChar.CancelRequests();
 
         }
     }
@@ -20,11 +24,13 @@ namespace Storeroom.LLM
     static class LLMPrewarm
     {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        static void WarmAllLLMCharacters()
+        static async void WarmAllLLMCharacters()
         {
-            // Kick off warm-up asynchronously; no need to await
             foreach (var c in Object.FindObjectsOfType<LLMCharacter>())
-                _ = c.Warmup();
+            {
+                try { await c.Warmup(); }   
+                catch { }                    
+            }
         }
     }
 }

@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using CrashKonijn.Goap.Runtime;
 using CrashKonijn.Agent.Runtime;
+using CrashKonijn.Agent.Core;
 using UnityEngine.UI;
 using Storeroom.LLM;
 using System.Collections.Generic;
 using System.Threading;
 using System;
+using UnityEngine.Events;
 
 namespace Storeroom.Goap
 {
@@ -29,6 +31,11 @@ namespace Storeroom.Goap
         readonly Dictionary<string, float> lastFired = new();
         bool busy = false;
 
+        [Serializable] public class ThoughtEvent : UnityEvent<HumorBrain> { }
+        public ThoughtEvent OnThoughtReady = new ThoughtEvent();
+        [SerializeField] private Camera myCamera;
+        public Camera MyCamera => myCamera;
+
         private void Awake()
         {
             if (_cachedGoap == null)
@@ -40,7 +47,7 @@ namespace Storeroom.Goap
             if (this._provider.AgentTypeBehaviour == null)
                 this._provider.AgentType = this._goap.GetAgentType("HumorAgent");
 
-            _agent.Events.OnActionStart += action => OnActionStart(action);
+            _agent.Events.OnActionStart += OnActionStart;
         }
 
         void OnEnable() => cts = new CancellationTokenSource();
@@ -48,7 +55,7 @@ namespace Storeroom.Goap
 
         private void OnDestroy()
         {
-            _agent.Events.OnActionStart -= action => OnActionStart(action);
+            _agent.Events.OnActionStart -= OnActionStart;
         }
 
         private void Start()
@@ -57,7 +64,7 @@ namespace Storeroom.Goap
                          .RequestGoal<WanderGoal>();
         }
 
-        private async void OnActionStart(object actionObj)
+        private async void OnActionStart(IAction actionObj)
         {
             if (busy || _prompts == null || _limiter == null || _thoughtText == null)
                 return;
@@ -77,6 +84,7 @@ namespace Storeroom.Goap
             {
                 string trimmed = await _limiter.ChatLimited(prompt);
                 _thoughtText.text = trimmed;
+                OnThoughtReady.Invoke(this);
             }
             catch (OperationCanceledException) { /* play-mode ended */ }
             finally { busy = false; }

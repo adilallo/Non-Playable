@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rows:
   - actionId: WanderAction
-    prompt: You are wandering, endlessly in search of something and filled with pain.
+    prompt: You are wandering, endlessly playing out the agonistic game of your search.
+      Rules translate the pain of violent conflict into the pleasures of disputation,
+      but there is no win condition for you, only the cost of the next action.

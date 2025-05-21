@@ -32,8 +32,12 @@ namespace Storeroom.LLM
         static readonly Dictionary<string, Task<Dictionary<int, string>>> _biasTasks
             = new Dictionary<string, Task<Dictionary<int, string>>>();
 
+        static bool IsServiceReady(LLMCharacter c) =>
+    c != null && c.llm != null && c.llm.started && !c.llm.failed;
+
         LLMCharacter npc;
         CancellationTokenSource _initCts;
+        Task _biasReady;
 
         private void Awake()
         {
@@ -47,10 +51,9 @@ namespace Storeroom.LLM
             lock (_biasTasks)
             {
                 if (!_biasTasks.TryGetValue(modelKey, out var t))
-                {
-                    t = BuildBiasDictionary(_initCts.Token);
-                    _biasTasks[modelKey] = t;
-                }
+                    _biasTasks[modelKey] = t = BuildBiasDictionary(_initCts.Token);
+
+                _biasReady = ApplyBiasAsync(t);  
             }
 
             _ = ApplyBiasAsync(_biasTasks[modelKey]);
@@ -59,11 +62,15 @@ namespace Storeroom.LLM
         void OnDisable()
         {
             _initCts.Cancel();
-            npc.CancelRequests();
+
+            if (IsServiceReady(npc))
+                npc.CancelRequests();
         }
 
         public async Task<string> ChatLimited(string prompt)
         {
+            await _biasReady;
+
             int target = UnityEngine.Random.Range(minSentences, maxSentences + 1);
 
             Task<string> llmTask = npc.Chat(prompt);
@@ -71,8 +78,7 @@ namespace Storeroom.LLM
             if (await Task.WhenAny(llmTask, Task.Delay(-1, _initCts.Token)) != llmTask)
                 throw new OperationCanceledException();
 
-            string trimmed = TrimToSentences(await llmTask, target);
-            return trimmed;
+            return TrimToSentences(await llmTask, target);
         }
 
         async Task ApplyBiasAsync(Task<Dictionary<int, string>> biasTask)
@@ -138,6 +144,9 @@ namespace Storeroom.LLM
             yield return " " + w.ToLowerInvariant();
             yield return " " + w.ToUpperInvariant();
             yield return " " + char.ToUpperInvariant(w[0]) + w.Substring(1).ToLowerInvariant();
+
+            yield return "\n" + w;
+            yield return "\n" + w.ToLowerInvariant();
         }
 
         string TrimToSentences(string text, int max)
