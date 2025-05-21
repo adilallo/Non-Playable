@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b214a8ded8d987f4eab56d7d3f957906, type: 3}
+  m_Name: LLM Prompt Table
+  m_EditorClassIdentifier: 
+  rows:
+  - actionId: WanderAction
+    prompt: You are wandering, endlessly playing out the agonistic game of your search.
+      Rules translate the pain of violent conflict into the pleasures of disputation,
+      but there is no win condition for you, only the cost of the next action.

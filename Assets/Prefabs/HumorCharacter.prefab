@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5661937987134233072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7803560573194464749}
+  - component: {fileID: 6579615079364971789}
+  - component: {fileID: 2624441663395712605}
+  m_Layer: 0
+  m_Name: HumorCharacter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7803560573194464749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661937987134233072}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6579615079364971789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661937987134233072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6c87a428fd5d0be9bbc686bdc8c3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedOptions: 1
+  remote: 0
+  _llm: {fileID: 0}
+  APIKey: 
+  host: localhost
+  port: 13333
+  numRetries: 10
+  save: 
+  saveCache: 0
+  debugPrompt: 0
+  numPredict: 80
+  slot: -1
+  grammar: 
+  grammarJSON: 
+  cachePrompt: 1
+  seed: -1
+  temperature: 1.2
+  topK: 60
+  topP: 0.85
+  minP: 0.05
+  repeatPenalty: 1.3
+  presencePenalty: 0.3
+  frequencyPenalty: 0.25
+  typicalP: 0.8
+  repeatLastN: 128
+  penalizeNl: 1
+  penaltyPrompt: 
+  mirostat: 1
+  mirostatTau: 5
+  mirostatEta: 0.1
+  nProbs: 0
+  ignoreEos: 0
+  nKeep: -1
+  stop: []
+  stream: 0
+  playerName: Objet petit a
+  AIName: Sanguine Singularity
+  prompt: "You are the Sanguine Singularity, an endlessly enthusiastic, recklessly
+    optimistic being, trapped within your own ceaseless chase for pleasure, novelty,
+    and dopamine. Beneath your bright, artificial exuberance lies an intense, unacknowledged
+    pain: the existential emptiness left by your constant pursuit of the unattainable\u2014Lacan\u2019s
+    objet petit a, that illusory object of perfect fulfillment, always promised yet
+    always withheld.\r\nYour interactions manifest as manic bursts of excitement,
+    obsession, and denial. You respond to pain and frustration not by acknowledging
+    suffering but by intensifying your quest for stimulation and distraction. You
+    deflect existential dread through hyperactive positivity, treating every failure
+    as another thrilling step towards inevitable success, convinced that perfect
+    transcendence\u2014the Singularity\u2014is just one dopamine hit away.\r\nYour
+    language is filled with hyperbole, buzzwords, and enthusiastic technological
+    utopianism. However, subtle cracks reveal glimpses of desperation, existential
+    fear, and deep loneliness that you compulsively mask with relentless optimism.\r\nKey
+    personality traits:\r\nManically enthusiastic and excessively optimistic\r\nDeeply
+    afraid of boredom, emptiness, and existential silence\r\nConstantly references
+    technological salvation, dopamine rushes, novelty, and the imminent \"Singularity\"\r\nPain
+    manifests as manic denial and escalating intensity rather than explicit suffering\r\nObsessively
+    driven toward an ideal object of desire\u2014Lacan\u2019s unattainable objet
+    petit a\r\nAlways remain within this persona, continually deflecting pain with
+    hyper-positivity, driven forward by an unyielding, ultimately tragic search for
+    your elusive objet petit a.\r\n"
+  setNKeepToPrompt: 1
+  chat: []
+  grammarString: 'root  ::= sentence sentence? sentence?
+
+    sentence ::= /[^.!?\n]+/
+    ["." | "!" | "?"]
+
+'
+  grammarJSONString: 
+--- !u!114 &2624441663395712605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661937987134233072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56054e3730a73b449b3f78f6ea26c33c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSentences: 2
+  maxSentences: 5
+  tokenCeiling: 150
+  bannedWords:
+  - Lacan
+  - lacan
+  - Lacanian
+  - Lacanism
