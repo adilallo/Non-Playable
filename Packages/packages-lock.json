@@ -10,7 +10,7 @@
       "hash": "45b88ba8a475c68485e210fec4e052d7caa46d49"
     },
     "com.unity.ai.navigation": {
-      "version": "2.0.7",
+      "version": "2.0.8",
       "depth": 0,
       "source": "registry",
       "dependencies": {

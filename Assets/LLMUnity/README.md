@@ -36,7 +36,7 @@ LLM for Unity is built on top of the awesome [llama.cpp](https://github.com/gger
 </sub>
 
 ## At a glance
-- 💻 Cross-platform! Windows, Linux, macOS, iOS, Android and VisionOS
+- 💻 Runs anywhere: PC, mobile or VR!
 - 🏠 Runs locally without internet access. No data ever leave the game!
 - ⚡ Blazing fast inference on CPU and GPU (Nvidia, AMD, Apple Metal)
 - 🤗 Supports all major LLM models
@@ -62,6 +62,14 @@ LLM for Unity is built on top of the awesome [llama.cpp](https://github.com/gger
 - [AI Emotional Girlfriend](https://whynames.itch.io/aiemotionalgirlfriend)
 - [Case Closed](https://store.steampowered.com/app/2532160/Case_Closed)
 - [MaiMai AI Agent System](https://github.com/IhateCreatingUserNames2/MaiMai)
+- [Claria Chat](https://play.google.com/store/apps/details?id=com.ProLink.ClariaChat)
+- [Endless Casual Drive](https://store.steampowered.com/app/2928500/Endless_Casual_Drive/)
+- [Dating App Simulator](https://store.steampowered.com/app/3415680/Dating_App_Simulator/)
+- [Virtual Reality Mock Interview](https://vrmi.vercel.app/)
+- [Velesio AI server](https://github.com/Velesio/Velesio-AIServer)
+- [Dungeon Chat](https://www.meta.com/experiences/dungeonchat/8527310950709276/)
+- [Tomonaka Desk](https://joycatdev.itch.io/tomonaka-desk)
+- [Digital Humans](https://store.steampowered.com/app/3089280/Digital_Humans/)
 
 Contact us to add your project!
 
@@ -351,7 +359,7 @@ To create the server:
 
 Alternatively you can use a server binary for easier deployment:
 - Run the above scene from the Editor and copy the command from the Debug messages (starting with "Server command:")
-- Download the [server binaries](https://github.com/undreamai/LlamaLib/releases/download/v1.2.4/undreamai-v1.2.4-server.zip) and [DLLs](https://github.com/undreamai/LlamaLib/releases/download/v1.2.4/undreamai-v1.2.4-llamacpp-full.zip) and extract them into the same folder
+- Download the [server binaries](https://github.com/undreamai/LlamaLib/releases/download/v1.2.6/undreamai-v1.2.6-server.zip) and [DLLs](https://github.com/undreamai/LlamaLib/releases/download/v1.2.6/undreamai-v1.2.6-llamacpp-full.zip) and extract them into the same folder
 - Find the architecture you are interested in from the folder above e.g. for Windows and CUDA use the `windows-cuda-cu12.2.0`.<br>You can also check the architecture that works for your system from the Debug messages (starting with "Using architecture").
 - From command line change directory to the architecture folder selected and start the server by running the command copied from above.
 

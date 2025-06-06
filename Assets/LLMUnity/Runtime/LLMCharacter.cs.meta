@@ -13,6 +13,6 @@ AssetOrigin:
   serializedVersion: 1
   productId: 273604
   packageName: LLM for Unity
-  packageVersion: 2.5.1
+  packageVersion: 2.5.2
   assetPath: Assets/LLMUnity/Runtime/LLMCharacter.cs
-  uploadId: 754381
+  uploadId: 760718
