@@ -3,13 +3,13 @@ using CrashKonijn.Goap.Runtime;
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Agent.Core;
 using UnityEngine.UI;
-using Storeroom.LLM;
+using NonPlayable.LLM;
 using System.Collections.Generic;
 using System.Threading;
 using System;
 using UnityEngine.Events;
 
-namespace Storeroom.Goap
+namespace NonPlayable.Goap
 {
     public class HumorBrain : MonoBehaviour
     {
@@ -21,6 +21,8 @@ namespace Storeroom.Goap
         [Header("Throttle")]
         [Tooltip("Seconds before the SAME Action can trigger another thought")]
         [SerializeField] float minInterval = 8f;
+
+        [SerializeField] private Transform _restPoint;
 
         private AgentBehaviour _agent;
         private GoapActionProvider _provider;
@@ -35,6 +37,8 @@ namespace Storeroom.Goap
         public ThoughtEvent OnThoughtReady = new ThoughtEvent();
         [SerializeField] private Camera myCamera;
         public Camera MyCamera => myCamera;
+
+        public Transform RestPoint => _restPoint;
 
         private void Awake()
         {
@@ -61,7 +65,7 @@ namespace Storeroom.Goap
         private void Start()
         {
             GetComponent<GoapActionProvider>()
-                         .RequestGoal<WanderGoal>();
+                         .RequestGoal<WanderGoal, RestGoal>();
         }
 
         private async void OnActionStart(IAction actionObj)

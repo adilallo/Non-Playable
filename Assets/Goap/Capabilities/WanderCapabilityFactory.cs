@@ -1,9 +1,8 @@
 using CrashKonijn.Goap.Core;
 using CrashKonijn.Goap.Runtime;
-using Storeroom.Goap.Sensors;
-using UnityEngine;
+using NonPlayable.Goap.Sensors;
 
-namespace Storeroom.Goap.Capabilities
+namespace NonPlayable.Goap.Capabilities
 {
     public class WanderCapabilityFactory : CapabilityFactoryBase
     {
@@ -12,16 +11,20 @@ namespace Storeroom.Goap.Capabilities
             var cap = new CapabilityBuilder("Wander");
 
             cap.AddGoal<WanderGoal>()
-               .AddCondition<IsIdle>(Comparison.GreaterThanOrEqual, 1)
+               .AddCondition<Fatigue>(Comparison.SmallerThan, 50)
                .SetBaseCost(1);
 
             cap.AddAction<WanderAction>()
-               .AddEffect<IsIdle>(EffectType.Increase)
+               .AddEffect<Fatigue>(EffectType.Increase)
+               .SetCallback(action => action.Properties.fatigueGain = 10f)
                .SetTarget<WanderTarget>()
                .SetStoppingDistance(0.1f);
 
             cap.AddTargetSensor<NavMeshWanderTargetSensor>()
                .SetTarget<WanderTarget>();
+
+            cap.AddWorldSensor<FatigueSensor>()
+                .SetKey<Fatigue>();
 
             return cap.Build();
         }

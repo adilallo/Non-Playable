@@ -1,8 +1,8 @@
-using Storeroom.Goap.Capabilities;
+using NonPlayable.Goap.Capabilities;
 using CrashKonijn.Goap.Core;
 using CrashKonijn.Goap.Runtime;
 
-namespace Storeroom.Goap.AgentType
+namespace NonPlayable.Goap.AgentType
 {
     public class HumorAgentTypeFactory : AgentTypeFactoryBase
     {
@@ -10,6 +10,7 @@ namespace Storeroom.Goap.AgentType
         {
             var factory = new AgentTypeBuilder("HumorAgent");
             factory.AddCapability<WanderCapabilityFactory>();
+            factory.AddCapability<RestCapabilityFactory>();
             return factory.Build();
         }
     }

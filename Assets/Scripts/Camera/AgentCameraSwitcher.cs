@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Storeroom.Goap;
+using NonPlayable.Goap;
 
-namespace Storeroom.Cam
+namespace NonPlayable.Cam
 {
     /// <summary>
     /// Manages a set of cameras—only one is active at a time.
@@ -24,7 +24,7 @@ namespace Storeroom.Cam
             }
         }
 
-        void OnThoughtReady(Storeroom.Goap.HumorBrain brain)
+        void OnThoughtReady(NonPlayable.Goap.HumorBrain brain)
         {
             var cam = brain.MyCamera;
             if (cam == null || cam == current) return;

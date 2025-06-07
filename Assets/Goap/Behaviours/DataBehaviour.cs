@@ -4,13 +4,12 @@ using CrashKonijn.Agent.Core;
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 
-namespace Storeroom.Goap.Behaviours
+namespace NonPlayable.Goap.Behaviours
 {
     /// <summary>
     /// Holds vital stats that sensors & actions read/write. Replace the simple
     /// tick‑up logic with your own later (animation events, LLM responses, etc.).
     /// </summary>
-    [AddComponentMenu("Storeroom/GOAP/Data Behaviour")]
     public class DataBehaviour : MonoBehaviour
     {
         [Header("Vitals (0‑100)")]
@@ -27,7 +26,7 @@ namespace Storeroom.Goap.Behaviours
         {
             float dt = Time.deltaTime;
             this.hunger = Mathf.Clamp(this.hunger + hungerRate * dt, 0f, 100f);
-            this.fatigue = Mathf.Clamp(this.fatigue + fatigueRate * dt, 0f, 100f);
+           // this.fatigue = Mathf.Clamp(this.fatigue + fatigueRate * dt, 0f, 100f);
             this.bowel = Mathf.Clamp(this.bowel + bowelRate * dt, 0f, 100f);
         }
     }

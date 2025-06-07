@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5219856377133322020}
   - component: {fileID: 438913874048078773}
   - component: {fileID: 8465866403290219598}
+  - component: {fileID: 9021731581968584223}
   - component: {fileID: 6925402585902769161}
   m_Layer: 0
   m_Name: Humor
@@ -165,8 +166,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prompts: {fileID: 11400000, guid: c552857a94952e8458bf6ea2c641c767, type: 2}
-  _llm: {fileID: 0}
+  _limiter: {fileID: 0}
   _thoughtText: {fileID: 0}
+  minInterval: 8
+  _restPoint: {fileID: 0}
+  OnThoughtReady:
+    m_PersistentCalls:
+      m_Calls: []
+  myCamera: {fileID: 0}
+--- !u!114 &9021731581968584223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579949523983359711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6abf28ae35359d4e9cb22a40c4fa02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunger: 0
+  fatigue: 0
+  bowel: 0
+  hungerRate: 5
+  fatigueRate: 4
+  bowelRate: 3
 --- !u!195 &6925402585902769161
 NavMeshAgent:
   m_ObjectHideFlags: 0

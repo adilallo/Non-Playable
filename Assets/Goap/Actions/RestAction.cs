@@ -1,14 +1,12 @@
-﻿using CrashKonijn.Agent.Core;
+using CrashKonijn.Agent.Core;
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 using NonPlayable.Goap.Behaviours;
-using System;
-using UnityEngine;
 
 namespace NonPlayable.Goap
 {
-    [GoapId("Wander-35d7b714-c1d4-455d-b5cc-1a5704a5c0b3")]
-    public class WanderAction : GoapActionBase<WanderAction.Data, WanderAction.Props>
+    [GoapId("Rest-b61adb49-43c0-4f79-a373-a1e0c6f6e9f5")]
+    public class RestAction : GoapActionBase<RestAction.Data>
     {
         // This method is called when the action is created
         // This method is optional and can be removed
@@ -28,7 +26,7 @@ namespace NonPlayable.Goap
         // This method is optional and can be removed
         public override void Start(IMonoAgent agent, Data data)
         {
-            data.Wait = ActionRunState.Wait(UnityEngine.Random.Range(0.8f, 1.6f));
+            data.Timer = ActionRunState.Wait(8f);
         }
 
         // This method is called once before the action is performed
@@ -40,21 +38,15 @@ namespace NonPlayable.Goap
         // This method is called every frame while the action is running
         // This method is required
         public override IActionRunState Perform(IMonoAgent agent, Data data, IActionContext context)
-            => data.Wait.IsRunning() ? data.Wait : ActionRunState.Completed;
+        {
+            return data.Timer.IsRunning() ? data.Timer : ActionRunState.Completed;
+        }
 
         // This method is called when the action is completed
         // This method is optional and can be removed
         public override void Complete(IMonoAgent agent, Data data)
         {
-            data.DataBehaviour.fatigue = Mathf.Clamp(
-            data.DataBehaviour.fatigue + Properties.fatigueGain,
-            0f, 100f);
-        }
-
-        [Serializable]
-        public class Props : IActionProperties
-        {
-            public float fatigueGain = 3f; 
+            data.Stats.fatigue = 0f;
         }
 
         // This method is called when the action is stopped
@@ -74,9 +66,8 @@ namespace NonPlayable.Goap
         public class Data : IActionData
         {
             public ITarget Target { get; set; }
-            public IActionRunState Wait { get; set; }
-            [GetComponent]
-            public DataBehaviour DataBehaviour { get; set; }
+            public IActionRunState Timer;
+            [GetComponent] public DataBehaviour Stats { get; set; }
         }
     }
 }

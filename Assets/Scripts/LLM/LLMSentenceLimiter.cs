@@ -7,7 +7,7 @@ using System;
 using Unity.VisualScripting.Antlr3.Runtime;
 using System.Linq;
 
-namespace Storeroom.LLM
+namespace NonPlayable.LLM
 {
     /// <summary>
     /// Trims the model’s full reply down to N sentences,

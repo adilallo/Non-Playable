@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Storeroom.LLM
+namespace NonPlayable.LLM
 {
     [CreateAssetMenu(menuName = "LLM/LLM Prompt Table")]
     public class LLMPromptTable : ScriptableObject
