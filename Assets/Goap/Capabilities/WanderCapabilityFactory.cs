@@ -11,7 +11,7 @@ namespace NonPlayable.Goap.Capabilities
             var cap = new CapabilityBuilder("Wander");
 
             cap.AddGoal<WanderGoal>()
-               .AddCondition<Fatigue>(Comparison.SmallerThan, 50)
+               .AddCondition<Fatigue>(Comparison.SmallerThan, 75)
                .SetBaseCost(1);
 
             cap.AddAction<WanderAction>()

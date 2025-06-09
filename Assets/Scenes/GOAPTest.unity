@@ -1601,7 +1601,7 @@ PrefabInstance:
       objectReference: {fileID: 23695705}
     - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: fatigueRate
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: restDuration
@@ -1734,8 +1734,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: fatigueRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: restDuration
-      value: 16
+      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1879,11 +1883,11 @@ PrefabInstance:
       objectReference: {fileID: 569953027}
     - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: fatigueRate
-      value: 16
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: restDuration
-      value: 48
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2080,11 +2084,11 @@ PrefabInstance:
       objectReference: {fileID: 924189907}
     - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: fatigueRate
-      value: 20
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: restDuration
-      value: 64
+      value: 48
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
