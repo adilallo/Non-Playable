@@ -1596,10 +1596,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 308435283}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
-      propertyPath: minInterval
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: _thoughtText
       value: 
       objectReference: {fileID: 23695705}
@@ -1725,10 +1721,6 @@ PrefabInstance:
       propertyPath: _restPoint
       value: 
       objectReference: {fileID: 44074928}
-    - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
-      propertyPath: minInterval
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: _thoughtText
       value: 
@@ -1881,10 +1873,6 @@ PrefabInstance:
       propertyPath: _restPoint
       value: 
       objectReference: {fileID: 472557251}
-    - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
-      propertyPath: minInterval
-      value: 24
-      objectReference: {fileID: 0}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: _thoughtText
       value: 
@@ -2086,10 +2074,6 @@ PrefabInstance:
       propertyPath: _restPoint
       value: 
       objectReference: {fileID: 233811405}
-    - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
-      propertyPath: minInterval
-      value: 32
-      objectReference: {fileID: 0}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: _thoughtText
       value: 

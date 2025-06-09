@@ -10,7 +10,7 @@ namespace NonPlayable.LLM
         [Serializable]
         public struct Row
         {
-            public string actionId;    // e.g. "WanderAction" or GUID if you prefer
+            public string actionId;
             [TextArea(3, 10)] public string prompt;
         }
         public List<Row> rows;

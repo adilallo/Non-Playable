@@ -168,12 +168,13 @@ MonoBehaviour:
   _prompts: {fileID: 11400000, guid: c552857a94952e8458bf6ea2c641c767, type: 2}
   _limiter: {fileID: 0}
   _thoughtText: {fileID: 0}
-  minInterval: 8
+  minInterval: 24
+  initialOffsetSpacing: 8
+  myCamera: {fileID: 0}
   _restPoint: {fileID: 0}
   OnThoughtReady:
     m_PersistentCalls:
       m_Calls: []
-  myCamera: {fileID: 0}
 --- !u!114 &9021731581968584223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,12 +187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6abf28ae35359d4e9cb22a40c4fa02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restDuration: 8
+  fatigueRate: 4
   hunger: 0
   fatigue: 0
   bowel: 0
-  hungerRate: 5
-  fatigueRate: 4
-  bowelRate: 3
 --- !u!195 &6925402585902769161
 NavMeshAgent:
   m_ObjectHideFlags: 0
