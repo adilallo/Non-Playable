@@ -1,8 +1,4 @@
-﻿using System;
-using UnityEngine;
-using CrashKonijn.Agent.Core;
-using CrashKonijn.Agent.Runtime;
-using CrashKonijn.Goap.Runtime;
+﻿using UnityEngine;
 
 namespace NonPlayable.Goap.Behaviours
 {
@@ -17,6 +13,10 @@ namespace NonPlayable.Goap.Behaviours
         public float restDuration = 8f;
         [Tooltip("Fatigue rate of this character")]
         public float fatigueRate = 1f;
+        [Tooltip("Rest rate of this character")]
+        public float restRate = 1f;
+        [Tooltip("How long this character can rest before leaving")]
+        public float restThreshold = 25f;
 
         [Header("Vitals (0‑100)")]
         public float hunger = 0f;

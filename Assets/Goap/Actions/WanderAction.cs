@@ -2,7 +2,6 @@
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 using NonPlayable.Goap.Behaviours;
-using System;
 using UnityEngine;
 
 namespace NonPlayable.Goap
@@ -10,7 +9,6 @@ namespace NonPlayable.Goap
     [GoapId("Wander-35d7b714-c1d4-455d-b5cc-1a5704a5c0b3")]
     public class WanderAction : GoapActionBase<WanderAction.Data>
     {
-        private float _fatigueRate;
 
         // This method is called when the action is created
         // This method is optional and can be removed
@@ -30,8 +28,6 @@ namespace NonPlayable.Goap
         // This method is optional and can be removed
         public override void Start(IMonoAgent agent, Data data)
         {
-            _fatigueRate = data.Stats.fatigueRate;
-            data.Wait = ActionRunState.Wait(UnityEngine.Random.Range(0.8f, 1.6f));
         }
 
         // This method is called once before the action is performed
@@ -43,15 +39,21 @@ namespace NonPlayable.Goap
         // This method is called every frame while the action is running
         // This method is required
         public override IActionRunState Perform(IMonoAgent agent, Data data, IActionContext context)
-            => data.Wait.IsRunning() ? data.Wait : ActionRunState.Completed;
+        {
+            var stats = data.Stats;
+            stats.fatigue = Mathf.Clamp(
+                stats.fatigue + stats.fatigueRate * context.DeltaTime,
+                0f, 100f
+            );
 
+            return context.IsInRange
+                ? ActionRunState.Completed
+                : ActionRunState.Continue;
+        }
         // This method is called when the action is completed
         // This method is optional and can be removed
         public override void Complete(IMonoAgent agent, Data data)
         {
-            data.Stats.fatigue = Mathf.Clamp(
-            data.Stats.fatigue + _fatigueRate,
-            0f, 100f);
         }
 
         // This method is called when the action is stopped
@@ -71,7 +73,6 @@ namespace NonPlayable.Goap
         public class Data : IActionData
         {
             public ITarget Target { get; set; }
-            public IActionRunState Wait { get; set; }
             [GetComponent] public DataBehaviour Stats { get; set; }
         }
     }

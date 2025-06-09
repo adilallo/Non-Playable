@@ -2,6 +2,7 @@ using CrashKonijn.Agent.Core;
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 using NonPlayable.Goap.Behaviours;
+using System;
 using UnityEngine;
 
 namespace NonPlayable.Goap
@@ -9,6 +10,7 @@ namespace NonPlayable.Goap
     [GoapId("Rest-b61adb49-43c0-4f79-a373-a1e0c6f6e9f5")]
     public class RestAction : GoapActionBase<RestAction.Data>
     {
+
         // This method is called when the action is created
         // This method is optional and can be removed
         public override void Created()
@@ -27,8 +29,7 @@ namespace NonPlayable.Goap
         // This method is optional and can be removed
         public override void Start(IMonoAgent agent, Data data)
         {
-            float duration = Mathf.Max(0.1f, data.Stats.restDuration);
-            data.Timer = ActionRunState.Wait(duration);
+
         }
 
         // This method is called once before the action is performed
@@ -41,14 +42,22 @@ namespace NonPlayable.Goap
         // This method is required
         public override IActionRunState Perform(IMonoAgent agent, Data data, IActionContext context)
         {
-            return data.Timer.IsRunning() ? data.Timer : ActionRunState.Completed;
+            var stats = data.Stats;
+            stats.fatigue = Mathf.Max(
+                0f,
+                stats.fatigue - stats.restRate * context.DeltaTime
+            );
+
+            return stats.fatigue > stats.restThreshold
+                ? ActionRunState.Continue
+                : ActionRunState.Completed;
+
         }
 
         // This method is called when the action is completed
         // This method is optional and can be removed
         public override void Complete(IMonoAgent agent, Data data)
         {
-            data.Stats.fatigue = 0f;
         }
 
         // This method is called when the action is stopped
@@ -68,7 +77,6 @@ namespace NonPlayable.Goap
         public class Data : IActionData
         {
             public ITarget Target { get; set; }
-            public IActionRunState Timer;
             [GetComponent] public DataBehaviour Stats { get; set; }
         }
     }

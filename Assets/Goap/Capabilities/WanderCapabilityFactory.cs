@@ -1,3 +1,4 @@
+using CrashKonijn.Agent.Core;
 using CrashKonijn.Goap.Core;
 using CrashKonijn.Goap.Runtime;
 using NonPlayable.Goap.Sensors;
@@ -17,7 +18,8 @@ namespace NonPlayable.Goap.Capabilities
             cap.AddAction<WanderAction>()
                .AddEffect<Fatigue>(EffectType.Increase)
                .SetTarget<WanderTarget>()
-               .SetStoppingDistance(0.1f);
+               .SetStoppingDistance(0.1f)
+               .SetMoveMode(ActionMoveMode.PerformWhileMoving);
 
             cap.AddTargetSensor<NavMeshWanderTargetSensor>()
                .SetTarget<WanderTarget>();
