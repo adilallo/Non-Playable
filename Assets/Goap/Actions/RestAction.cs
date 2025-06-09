@@ -2,6 +2,7 @@ using CrashKonijn.Agent.Core;
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 using NonPlayable.Goap.Behaviours;
+using UnityEngine;
 
 namespace NonPlayable.Goap
 {
@@ -26,7 +27,8 @@ namespace NonPlayable.Goap
         // This method is optional and can be removed
         public override void Start(IMonoAgent agent, Data data)
         {
-            data.Timer = ActionRunState.Wait(8f);
+            float duration = Mathf.Max(0.1f, data.Stats.restDuration);
+            data.Timer = ActionRunState.Wait(duration);
         }
 
         // This method is called once before the action is performed

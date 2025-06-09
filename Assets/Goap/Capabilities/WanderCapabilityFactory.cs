@@ -16,7 +16,6 @@ namespace NonPlayable.Goap.Capabilities
 
             cap.AddAction<WanderAction>()
                .AddEffect<Fatigue>(EffectType.Increase)
-               .SetCallback(action => action.Properties.fatigueGain = 10f)
                .SetTarget<WanderTarget>()
                .SetStoppingDistance(0.1f);
 

@@ -8,8 +8,10 @@ using UnityEngine;
 namespace NonPlayable.Goap
 {
     [GoapId("Wander-35d7b714-c1d4-455d-b5cc-1a5704a5c0b3")]
-    public class WanderAction : GoapActionBase<WanderAction.Data, WanderAction.Props>
+    public class WanderAction : GoapActionBase<WanderAction.Data>
     {
+        private float _fatigueRate;
+
         // This method is called when the action is created
         // This method is optional and can be removed
         public override void Created()
@@ -28,6 +30,7 @@ namespace NonPlayable.Goap
         // This method is optional and can be removed
         public override void Start(IMonoAgent agent, Data data)
         {
+            _fatigueRate = data.Stats.fatigueRate;
             data.Wait = ActionRunState.Wait(UnityEngine.Random.Range(0.8f, 1.6f));
         }
 
@@ -46,15 +49,9 @@ namespace NonPlayable.Goap
         // This method is optional and can be removed
         public override void Complete(IMonoAgent agent, Data data)
         {
-            data.DataBehaviour.fatigue = Mathf.Clamp(
-            data.DataBehaviour.fatigue + Properties.fatigueGain,
+            data.Stats.fatigue = Mathf.Clamp(
+            data.Stats.fatigue + _fatigueRate,
             0f, 100f);
-        }
-
-        [Serializable]
-        public class Props : IActionProperties
-        {
-            public float fatigueGain = 3f; 
         }
 
         // This method is called when the action is stopped
@@ -75,8 +72,7 @@ namespace NonPlayable.Goap
         {
             public ITarget Target { get; set; }
             public IActionRunState Wait { get; set; }
-            [GetComponent]
-            public DataBehaviour DataBehaviour { get; set; }
+            [GetComponent] public DataBehaviour Stats { get; set; }
         }
     }
 }

@@ -12,22 +12,15 @@ namespace NonPlayable.Goap.Behaviours
     /// </summary>
     public class DataBehaviour : MonoBehaviour
     {
+        [Header("Personality")]
+        [Tooltip("How many seconds this character sleeps when resting")]
+        public float restDuration = 8f;
+        [Tooltip("Fatigue rate of this character")]
+        public float fatigueRate = 1f;
+
         [Header("Vitals (0‑100)")]
         public float hunger = 0f;
         public float fatigue = 0f;
         public float bowel = 0f;
-
-        [Header("Speeds (units per second)")]
-        public float hungerRate = 5f;
-        public float fatigueRate = 4f;
-        public float bowelRate = 3f;
-
-        private void Update()
-        {
-            float dt = Time.deltaTime;
-            this.hunger = Mathf.Clamp(this.hunger + hungerRate * dt, 0f, 100f);
-           // this.fatigue = Mathf.Clamp(this.fatigue + fatigueRate * dt, 0f, 100f);
-            this.bowel = Mathf.Clamp(this.bowel + bowelRate * dt, 0f, 100f);
-        }
     }
 }

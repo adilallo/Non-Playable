@@ -17,3 +17,7 @@ MonoBehaviour:
     prompt: You are wandering, endlessly playing out the agonistic game of your search.
       Rules translate the pain of violent conflict into the pleasures of disputation,
       but there is no win condition for you, only the cost of the next action.
+  - actionId: RestAction
+    prompt: You are attempting to rest but can find no peace as your mind attempts
+      to understand the source of your cycle of pain. You have no choice but to restlessly
+      continue.

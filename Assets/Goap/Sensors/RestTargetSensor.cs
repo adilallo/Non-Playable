@@ -21,7 +21,6 @@ namespace NonPlayable.Goap.Sensors
                 return previous;
 
             var pos = brain.RestPoint.transform.position;
-            Debug.Log($"RestTargetSensor: Sensed position {pos} for agent {agent.Transform.name}");
 
             if (previous is PositionTarget pt)
                 return pt.SetPosition(pos);

@@ -826,8 +826,8 @@ Transform:
   m_Children:
   - {fileID: 1848806658}
   - {fileID: 1795427543}
-  - {fileID: 1790500337}
   - {fileID: 1842462146}
+  - {fileID: 1790500337}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &423314657
@@ -1047,6 +1047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MelancholicCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6579615079364971789, guid: 26942f58728505240b5874326f481f3a, type: 3}
+      propertyPath: _llm
+      value: 
+      objectReference: {fileID: 146087658}
     - target: {fileID: 6579615079364971789, guid: 26942f58728505240b5874326f481f3a, type: 3}
       propertyPath: AIName
       value: Melancholic Doomscroll
@@ -1593,12 +1597,20 @@ PrefabInstance:
       objectReference: {fileID: 308435283}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: minInterval
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: _thoughtText
       value: 
       objectReference: {fileID: 23695705}
+    - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: fatigueRate
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: restDuration
+      value: 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1715,7 +1727,7 @@ PrefabInstance:
       objectReference: {fileID: 44074928}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: minInterval
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: _thoughtText
@@ -1728,6 +1740,10 @@ PrefabInstance:
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: OnThoughtReady.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: restDuration
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1867,12 +1883,20 @@ PrefabInstance:
       objectReference: {fileID: 472557251}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: minInterval
-      value: 16
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: _thoughtText
       value: 
       objectReference: {fileID: 569953027}
+    - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: fatigueRate
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: restDuration
+      value: 48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2064,12 +2088,20 @@ PrefabInstance:
       objectReference: {fileID: 233811405}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: minInterval
-      value: 20
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 8465866403290219598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: _thoughtText
       value: 
       objectReference: {fileID: 924189907}
+    - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: fatigueRate
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021731581968584223, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: restDuration
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2307,6 +2339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhlegmaticCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6579615079364971789, guid: 26942f58728505240b5874326f481f3a, type: 3}
+      propertyPath: _llm
+      value: 
+      objectReference: {fileID: 146087658}
     - target: {fileID: 6579615079364971789, guid: 26942f58728505240b5874326f481f3a, type: 3}
       propertyPath: AIName
       value: Phlegmatic Nihilism
@@ -2841,6 +2877,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CholericCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6579615079364971789, guid: 26942f58728505240b5874326f481f3a, type: 3}
+      propertyPath: _llm
+      value: 
+      objectReference: {fileID: 146087658}
     - target: {fileID: 6579615079364971789, guid: 26942f58728505240b5874326f481f3a, type: 3}
       propertyPath: AIName
       value: Choleric Conspiracy

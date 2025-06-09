@@ -89,6 +89,7 @@ namespace NonPlayable.Goap
                 string trimmed = await _limiter.ChatLimited(prompt);
                 _thoughtText.text = trimmed;
                 OnThoughtReady.Invoke(this);
+                Debug.Log($"Prompt: {id} - {prompt}", this);
             }
             catch (OperationCanceledException) { /* play-mode ended */ }
             finally { busy = false; }
