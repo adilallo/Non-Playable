@@ -8,19 +8,24 @@ namespace NonPlayable.Goap.Behaviours
     /// </summary>
     public class DataBehaviour : MonoBehaviour
     {
-        [Header("Personality")]
-        [Tooltip("How many seconds this character sleeps when resting")]
-        public float restDuration = 8f;
+        [Header("Rest")]
         [Tooltip("Fatigue rate of this character")]
         public float fatigueRate = 1f;
         [Tooltip("Rest rate of this character")]
         public float restRate = 1f;
         [Tooltip("How long this character can rest before leaving")]
         public float restThreshold = 25f;
+        
+        [Header("Work")]
+        [Tooltip("Debt rate of this character")]
+        public float debtRate = 1f;
+        [Tooltip("Work rate of this character")]
+        public float workRate = 1f;
+        [Tooltip("How long this character can work before leaving")]
+        public float workThreshold = 25f;     
 
         [Header("Vitals (0‑100)")]
-        public float hunger = 0f;
+        public float debt = 0f;
         public float fatigue = 0f;
-        public float bowel = 0f;
     }
 }

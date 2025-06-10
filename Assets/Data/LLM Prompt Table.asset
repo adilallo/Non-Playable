@@ -21,3 +21,5 @@ MonoBehaviour:
     prompt: You are attempting to rest but can find no peace as your mind attempts
       to understand the source of your cycle of pain. You have no choice but to restlessly
       continue.
+  - actionId: WorkAction
+    prompt: You are in massive debt.

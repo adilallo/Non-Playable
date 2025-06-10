@@ -31,6 +31,11 @@ namespace NonPlayable.Goap
         [Header("Rest")]
         [SerializeField] private Transform _restPoint;
         public Transform RestPoint => _restPoint;
+
+        [Header("Work")]
+        [SerializeField] private Transform _workPoint;
+        public Transform WorkPoint => _workPoint;
+
         [Serializable] public class ThoughtEvent : UnityEvent<HumorBrain> { }
         public ThoughtEvent OnThoughtReady = new ThoughtEvent();
 
@@ -73,7 +78,7 @@ namespace NonPlayable.Goap
 
         private void Start()
         {
-            _provider.RequestGoal<WanderGoal, RestGoal>();
+            _provider.RequestGoal<WanderGoal, RestGoal, WorkGoal>();
             StartCoroutine(ThoughtLoop());
         }
 

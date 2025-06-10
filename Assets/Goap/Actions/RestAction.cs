@@ -2,7 +2,6 @@ using CrashKonijn.Agent.Core;
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 using NonPlayable.Goap.Behaviours;
-using System;
 using UnityEngine;
 
 namespace NonPlayable.Goap

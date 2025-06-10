@@ -11,7 +11,7 @@ namespace NonPlayable.Goap.Capabilities
             var cap = new CapabilityBuilder("Rest");
 
             cap.AddGoal<RestGoal>()
-               .AddCondition<Fatigue>(Comparison.GreaterThanOrEqual, 75)
+               .AddCondition<Fatigue>(Comparison.SmallerThanOrEqual, 75)
                .SetBaseCost(1);
 
             cap.AddAction<RestAction>()

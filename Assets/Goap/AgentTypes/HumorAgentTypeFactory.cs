@@ -11,6 +11,7 @@ namespace NonPlayable.Goap.AgentType
             var factory = new AgentTypeBuilder("HumorAgent");
             factory.AddCapability<WanderCapabilityFactory>();
             factory.AddCapability<RestCapabilityFactory>();
+            factory.AddCapability<WorkCapabilityFactory>();
             return factory.Build();
         }
     }
