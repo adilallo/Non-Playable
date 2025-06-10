@@ -12,6 +12,7 @@ namespace NonPlayable.Goap.AgentType
             factory.AddCapability<WanderCapabilityFactory>();
             factory.AddCapability<RestCapabilityFactory>();
             factory.AddCapability<WorkCapabilityFactory>();
+            factory.AddCapability<EatCapabilityFactory>();
             return factory.Build();
         }
     }

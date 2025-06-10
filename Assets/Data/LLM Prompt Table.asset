@@ -23,3 +23,5 @@ MonoBehaviour:
       continue.
   - actionId: WorkAction
     prompt: You are in massive debt.
+  - actionId: EatAction
+    prompt: You are insatiably hungry.

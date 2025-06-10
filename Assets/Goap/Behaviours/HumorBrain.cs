@@ -78,7 +78,7 @@ namespace NonPlayable.Goap
 
         private void Start()
         {
-            _provider.RequestGoal<WanderGoal, RestGoal, WorkGoal>();
+            _provider.RequestGoal<WanderGoal, RestGoal, WorkGoal, EatGoal>();
             StartCoroutine(ThoughtLoop());
         }
 

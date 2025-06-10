@@ -62,7 +62,7 @@ namespace NonPlayable.Goap
             }
             Debug.LogWarning($"[StuckRecovery] {name} fell off the NavMesh or got wedged—replanning.");
             agent.StopAction(true);
-            provider.RequestGoal<WanderGoal, RestGoal, WorkGoal>();
+            provider.RequestGoal<WanderGoal, RestGoal, WorkGoal, EatGoal>();
         }
     }
 }

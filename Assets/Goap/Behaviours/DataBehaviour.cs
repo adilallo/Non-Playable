@@ -22,10 +22,20 @@ namespace NonPlayable.Goap.Behaviours
         [Tooltip("Work rate of this character")]
         public float workRate = 1f;
         [Tooltip("How long this character can work before leaving")]
-        public float workThreshold = 25f;     
+        public float workThreshold = 25f;
+
+        [Header("Eat")]
+        [Tooltip("Hunger rate of this character")]
+        public float hungerRate = 1f;
+        [Tooltip("Eat rate of this character")]
+        public float eatRate = 1f;
+        [Tooltip("How long this character can go without eating before leaving")]
+        public float eatThreshold = 10f;
+
 
         [Header("Vitals (0‑100)")]
         public float debt = 0f;
         public float fatigue = 0f;
+        public float hunger = 0f;
     }
 }
