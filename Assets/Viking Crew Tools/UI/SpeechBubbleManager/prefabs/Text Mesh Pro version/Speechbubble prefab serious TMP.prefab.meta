@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5db8c9d4fc49b23418555e36ef59302d
+timeCreated: 1477309258
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75417
+  packageName: Speech Bubble Manager
+  packageVersion: 1.5.0
+  assetPath: Assets/Viking Crew Tools/UI/SpeechBubbleManager/prefabs/Text Mesh Pro
+    version/Speechbubble prefab serious TMP.prefab
+  uploadId: 596222

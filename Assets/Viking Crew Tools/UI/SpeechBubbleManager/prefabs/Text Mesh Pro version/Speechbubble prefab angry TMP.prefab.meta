@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b579059b21123dc4280b67f54c338070
+timeCreated: 1477309258
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75417
+  packageName: Speech Bubble Manager
+  packageVersion: 1.5.0
+  assetPath: Assets/Viking Crew Tools/UI/SpeechBubbleManager/prefabs/Text Mesh Pro
+    version/Speechbubble prefab angry TMP.prefab
+  uploadId: 596222

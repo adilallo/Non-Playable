@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 23e76975da6ab524fa22e19d8dbe9d24
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75417
+  packageName: Speech Bubble Manager
+  packageVersion: 1.5.0
+  assetPath: Assets/Viking Crew Tools/UI/SpeechBubbleManager/Editor/VikingCrew.Tools.Ui.SpeechBubbleManager.Editor.asmdef
+  uploadId: 596222

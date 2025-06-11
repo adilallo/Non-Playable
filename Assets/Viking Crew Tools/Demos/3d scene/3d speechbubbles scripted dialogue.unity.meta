@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 16e44429f7ef3fc458410ffda76baba4
+timeCreated: 1477317161
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75417
+  packageName: Speech Bubble Manager
+  packageVersion: 1.5.0
+  assetPath: Assets/Viking Crew Tools/Demos/3d scene/3d speechbubbles scripted dialogue.unity
+  uploadId: 596222

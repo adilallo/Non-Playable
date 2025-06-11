@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 296e45fab358000469a796ec183f0004
+timeCreated: 1477309258
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75417
+  packageName: Speech Bubble Manager
+  packageVersion: 1.5.0
+  assetPath: Assets/Viking Crew Tools/UI/SpeechBubbleManager/prefabs/Classic Unity
+    UI/Speechbubble prefab angry.prefab
+  uploadId: 596222

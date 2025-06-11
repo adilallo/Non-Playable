@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 05446f64a2b83b642aa8c2a4ddbbbeba
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75417
+  packageName: Speech Bubble Manager
+  packageVersion: 1.5.0
+  assetPath: Assets/Viking Crew Tools/UI/SpeechBubbleManager/fonts/Laffayette_Comic_Pro
+    SDF.asset
+  uploadId: 596222

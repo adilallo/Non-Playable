@@ -1,0 +1,16 @@
+{
+    "name": "VikingCrew.Tools.Ui.SpeechBubbleManager.Editor",
+    "references": [
+        "VikingCrew.Tools.Ui.SpeechBubbleManager"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

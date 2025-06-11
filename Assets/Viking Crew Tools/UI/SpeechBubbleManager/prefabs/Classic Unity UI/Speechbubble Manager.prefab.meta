@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0052c7a2273aa0a468757492e71cdaa6
+timeCreated: 1477309300
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75417
+  packageName: Speech Bubble Manager
+  packageVersion: 1.5.0
+  assetPath: Assets/Viking Crew Tools/UI/SpeechBubbleManager/prefabs/Classic Unity
+    UI/Speechbubble Manager.prefab
+  uploadId: 596222

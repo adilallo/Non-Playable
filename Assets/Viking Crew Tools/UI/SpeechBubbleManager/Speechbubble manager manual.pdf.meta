@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 22ebaffddc01c34488dd3d0675e264bb
+timeCreated: 1500663045
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75417
+  packageName: Speech Bubble Manager
+  packageVersion: 1.5.0
+  assetPath: Assets/Viking Crew Tools/UI/SpeechBubbleManager/Speechbubble manager
+    manual.pdf
+  uploadId: 596222
