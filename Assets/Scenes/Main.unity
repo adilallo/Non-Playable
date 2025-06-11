@@ -1937,7 +1937,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 0.12
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 0074c8249ad6d5441bde5d66d51e11c9, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e6d5b6931071c904a890ea8dc744aef8, type: 2}
   m_BuildHeightMesh: 1
 --- !u!20 &1197061202 stripped
 Camera:
@@ -2592,7 +2592,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3019802357415506049, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 7009848779801074496, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 2029653668768983013, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 5043663941078610840, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 2742374090662089873, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 4364672074426162701, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 5145279833893377269, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 5475875840202900849, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 8761154363059568735, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 5149127239039682844, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 3989317406124234269, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 4918499915152233632, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 1971228045677015210, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 2420368324439397478, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 7690497447382159287, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 8544373569423216721, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 6728577107755263854, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 5459262106512710781, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 5532980554037997042, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 6155195066614530943, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 1238866832444753971, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 2277075283256766616, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 3297709168547847191, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 7982690787071284510, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 1740817458727708515, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 6947449405330383281, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 621238768689703075, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 3867372958077510456, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
+    - {fileID: 8345070700224654063, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8345070699079395523, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
@@ -3267,6 +3296,22 @@ PrefabInstance:
       propertyPath: _defaultTimeToLive
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013829348910, guid: aa93536123924f34bb7610df895940b7, type: 3}
+      propertyPath: _prefabs.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 4543692224542121471, guid: 7f4761d2cedd9324281c516c1b08ecf0, type: 3}
+    - target: {fileID: 114000013829348910, guid: aa93536123924f34bb7610df895940b7, type: 3}
+      propertyPath: _prefabs.Array.data[1].prefab
+      value: 
+      objectReference: {fileID: 6817860018694641512, guid: 42d6c8c24dc8c434088dac58ea850c22, type: 3}
+    - target: {fileID: 114000013829348910, guid: aa93536123924f34bb7610df895940b7, type: 3}
+      propertyPath: _prefabs.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 4675814634365520321, guid: cb126701a504b0b40a61d10c81f9e588, type: 3}
+    - target: {fileID: 114000013829348910, guid: aa93536123924f34bb7610df895940b7, type: 3}
+      propertyPath: _prefabs.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 7098476901668589744, guid: b0a6125c979f9a246924b0eb75ab8e95, type: 3}
     - target: {fileID: 223000013049386044, guid: aa93536123924f34bb7610df895940b7, type: 3}
       propertyPath: m_Camera
       value: 

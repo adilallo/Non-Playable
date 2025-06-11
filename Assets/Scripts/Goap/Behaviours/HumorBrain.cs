@@ -38,6 +38,7 @@ namespace NonPlayable.Goap
 
         [Serializable] public class ThoughtEvent : UnityEvent<HumorBrain> { }
         public ThoughtEvent OnThoughtReady = new ThoughtEvent();
+        public string LastActionId { get; private set; }
 
         private AgentBehaviour _agent;
         private GoapActionProvider _provider;
@@ -96,6 +97,7 @@ namespace NonPlayable.Goap
                         var id = currentAction.GetType().Name;
                         if (_prompts.TryGetPrompt(id, out var prompt))
                         {
+                            LastActionId = id;
                             _ = FireThought(id, prompt);
                         }
                     }
