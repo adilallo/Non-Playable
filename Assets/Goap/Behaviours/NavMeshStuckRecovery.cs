@@ -1,11 +1,10 @@
-using Storeroom.Goap;
+using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
-using CrashKonijn.Agent.Runtime;
 
-namespace Storeroom.Goap
+namespace NonPlayable.Goap
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(GoapActionProvider))]
     public class NavMeshStuckRecovery : MonoBehaviour
@@ -56,9 +55,14 @@ namespace Storeroom.Goap
         void Unstick(GoapActionProvider provider)
         {
             nav.ResetPath();
+            if (!NavMesh.SamplePosition(transform.position, out var hit, 2f, NavMesh.AllAreas) &&
+        NavMesh.SamplePosition(transform.position, out hit, 10f, NavMesh.AllAreas))
+            {
+                nav.Warp(hit.position);
+            }
             Debug.LogWarning($"[StuckRecovery] {name} fell off the NavMesh or got wedged—replanning.");
             agent.StopAction(true);
-            provider.RequestGoal<WanderGoal>();
+            provider.RequestGoal<WanderGoal, RestGoal, WorkGoal, EatGoal>();
         }
     }
 }

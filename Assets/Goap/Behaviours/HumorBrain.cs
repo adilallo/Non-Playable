@@ -3,13 +3,14 @@ using CrashKonijn.Goap.Runtime;
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Agent.Core;
 using UnityEngine.UI;
-using Storeroom.LLM;
+using NonPlayable.LLM;
 using System.Collections.Generic;
 using System.Threading;
 using System;
 using UnityEngine.Events;
+using System.Collections;
 
-namespace Storeroom.Goap
+namespace NonPlayable.Goap
 {
     public class HumorBrain : MonoBehaviour
     {
@@ -19,25 +20,41 @@ namespace Storeroom.Goap
         [SerializeField] private Text _thoughtText;
 
         [Header("Throttle")]
-        [Tooltip("Seconds before the SAME Action can trigger another thought")]
-        [SerializeField] float minInterval = 8f;
+        [Tooltip("Seconds before the SAME Action can trigger another thought after the first one")]
+        [SerializeField] private float minInterval = 24f;
+        [Tooltip("Spacing between initial fire times")]
+        [SerializeField] private float initialOffsetSpacing = 8f;
+
+        [SerializeField] private Camera myCamera;
+        public Camera MyCamera => myCamera;
+
+        [Header("Rest")]
+        [SerializeField] private Transform _restPoint;
+        public Transform RestPoint => _restPoint;
+
+        [Header("Work")]
+        [SerializeField] private Transform _workPoint;
+        public Transform WorkPoint => _workPoint;
+
+        [Serializable] public class ThoughtEvent : UnityEvent<HumorBrain> { }
+        public ThoughtEvent OnThoughtReady = new ThoughtEvent();
 
         private AgentBehaviour _agent;
         private GoapActionProvider _provider;
         private GoapBehaviour _goap;
         static GoapBehaviour _cachedGoap;
+        private CancellationTokenSource _cts;
 
-        CancellationTokenSource cts;
-        readonly Dictionary<string, float> lastFired = new();
-        bool busy = false;
-
-        [Serializable] public class ThoughtEvent : UnityEvent<HumorBrain> { }
-        public ThoughtEvent OnThoughtReady = new ThoughtEvent();
-        [SerializeField] private Camera myCamera;
-        public Camera MyCamera => myCamera;
-
+        private static int _brainCount;
+        private int _brainIndex;
+        private float _initialDelay;
+        private bool _busy = false;
+        
         private void Awake()
         {
+            _brainIndex = _brainCount++;
+            _initialDelay = initialOffsetSpacing * (_brainIndex + 1);
+
             if (_cachedGoap == null)
                 _cachedGoap = FindFirstObjectByType<GoapBehaviour>();
             this._goap = _cachedGoap;
@@ -46,48 +63,60 @@ namespace Storeroom.Goap
 
             if (this._provider.AgentTypeBehaviour == null)
                 this._provider.AgentType = this._goap.GetAgentType("HumorAgent");
-
-            _agent.Events.OnActionStart += OnActionStart;
         }
 
-        void OnEnable() => cts = new CancellationTokenSource();
-        void OnDisable() { cts.Cancel(); cts.Dispose(); }
-
-        private void OnDestroy()
+        private void OnEnable()
         {
-            _agent.Events.OnActionStart -= OnActionStart;
+            _cts = new CancellationTokenSource();
+        }
+
+        private void OnDisable() 
+        { 
+            _cts.Cancel(); 
+            _cts.Dispose(); 
         }
 
         private void Start()
         {
-            GetComponent<GoapActionProvider>()
-                         .RequestGoal<WanderGoal>();
+            _provider.RequestGoal<WanderGoal, RestGoal, WorkGoal, EatGoal>();
+            StartCoroutine(ThoughtLoop());
         }
 
-        private async void OnActionStart(IAction actionObj)
+        private IEnumerator ThoughtLoop()
         {
-            if (busy || _prompts == null || _limiter == null || _thoughtText == null)
-                return;
+            yield return new WaitForSeconds(_initialDelay);
 
-            string id = actionObj.GetType().Name;
+            while (true)
+            {
+                if (!_busy && _prompts != null && _limiter != null && _thoughtText != null)
+                {
+                    var currentAction = _agent.ActionState.Action;
+                    if (currentAction != null)
+                    {
+                        var id = currentAction.GetType().Name;
+                        if (_prompts.TryGetPrompt(id, out var prompt))
+                        {
+                            _ = FireThought(id, prompt);
+                        }
+                    }
+                }
 
-            if (!_prompts.TryGetPrompt(id, out var prompt))
-                return;
+                yield return new WaitForSeconds(minInterval);
+            }
+        }
 
-            if (lastFired.TryGetValue(id, out var t) && Time.time - t < minInterval)
-                return;
-
-            lastFired[id] = Time.time;
-            busy = true;
-
+        private async System.Threading.Tasks.Task FireThought(string id, string prompt)
+        {
+            _busy = true;
             try
             {
-                string trimmed = await _limiter.ChatLimited(prompt);
+                var trimmed = await _limiter.ChatLimited(prompt);
                 _thoughtText.text = trimmed;
                 OnThoughtReady.Invoke(this);
+                Debug.Log($"Prompt: {id} – {prompt}", this);
             }
             catch (OperationCanceledException) { /* play-mode ended */ }
-            finally { busy = false; }
+            finally { _busy = false; }
         }
     }
 }

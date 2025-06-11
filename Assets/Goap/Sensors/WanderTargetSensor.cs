@@ -2,7 +2,7 @@ using CrashKonijn.Agent.Core;
 using CrashKonijn.Goap.Runtime;
 using UnityEngine;
 
-namespace Storeroom.Goap.Sensors
+namespace NonPlayable.Goap.Sensors
 {
     public class WanderTargetSensor : LocalTargetSensorBase
     {

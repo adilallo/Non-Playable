@@ -1,4 +1,4 @@
-﻿using CrashKonijn.Agent.Core;
+using CrashKonijn.Agent.Core;
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 using NonPlayable.Goap.Behaviours;
@@ -6,8 +6,8 @@ using UnityEngine;
 
 namespace NonPlayable.Goap
 {
-    [GoapId("Wander-35d7b714-c1d4-455d-b5cc-1a5704a5c0b3")]
-    public class WanderAction : GoapActionBase<WanderAction.Data>
+    [GoapId("Rest-b61adb49-43c0-4f79-a373-a1e0c6f6e9f5")]
+    public class RestAction : GoapActionBase<RestAction.Data>
     {
 
         // This method is called when the action is created
@@ -28,6 +28,7 @@ namespace NonPlayable.Goap
         // This method is optional and can be removed
         public override void Start(IMonoAgent agent, Data data)
         {
+
         }
 
         // This method is called once before the action is performed
@@ -41,25 +42,17 @@ namespace NonPlayable.Goap
         public override IActionRunState Perform(IMonoAgent agent, Data data, IActionContext context)
         {
             var stats = data.Stats;
-            stats.fatigue = Mathf.Clamp(
-                stats.fatigue + stats.fatigueRate * context.DeltaTime,
-                0f, 100f
+            stats.fatigue = Mathf.Max(
+                0f,
+                stats.fatigue - stats.restRate * context.DeltaTime
             );
 
-            stats.debt = Mathf.Clamp(
-                stats.debt + stats.debtRate * context.DeltaTime,
-                0f, 100f
-                );
+            return stats.fatigue > stats.restThreshold
+                ? ActionRunState.Continue
+                : ActionRunState.Completed;
 
-            stats.hunger = Mathf.Clamp(
-                stats.hunger + stats.hungerRate * context.DeltaTime,
-                0f, 100f
-                );
-
-            return context.IsInRange
-                ? ActionRunState.Completed
-                : ActionRunState.Continue;
         }
+
         // This method is called when the action is completed
         // This method is optional and can be removed
         public override void Complete(IMonoAgent agent, Data data)

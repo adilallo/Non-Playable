@@ -3,7 +3,7 @@ using CrashKonijn.Goap.Runtime;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Storeroom.Goap.Sensors
+namespace NonPlayable.Goap.Sensors
 {
     [GoapId("NavMeshWanderTargetSensor-0af7b2c8-a313-4f18-88f3-40c0702a81d9")]
     public class NavMeshWanderTargetSensor : LocalTargetSensorBase

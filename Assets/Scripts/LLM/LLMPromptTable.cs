@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Storeroom.LLM
+namespace NonPlayable.LLM
 {
     [CreateAssetMenu(menuName = "LLM/LLM Prompt Table")]
     public class LLMPromptTable : ScriptableObject
@@ -10,7 +10,7 @@ namespace Storeroom.LLM
         [Serializable]
         public struct Row
         {
-            public string actionId;    // e.g. "WanderAction" or GUID if you prefer
+            public string actionId;
             [TextArea(3, 10)] public string prompt;
         }
         public List<Row> rows;

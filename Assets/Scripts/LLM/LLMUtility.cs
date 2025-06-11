@@ -1,7 +1,7 @@
 using LLMUnity;
 using UnityEngine;
 
-namespace Storeroom.LLM
+namespace NonPlayable.LLM
 {
     [DefaultExecutionOrder(-1000)]
     public class LLMUtility : MonoBehaviour

@@ -1,4 +1,4 @@
-﻿using CrashKonijn.Agent.Core;
+using CrashKonijn.Agent.Core;
 using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 using NonPlayable.Goap.Behaviours;
@@ -6,10 +6,9 @@ using UnityEngine;
 
 namespace NonPlayable.Goap
 {
-    [GoapId("Wander-35d7b714-c1d4-455d-b5cc-1a5704a5c0b3")]
-    public class WanderAction : GoapActionBase<WanderAction.Data>
+    [GoapId("Eat-c2038e75-c0b9-491b-aad7-24eab0388134")]
+    public class EatAction : GoapActionBase<EatAction.Data>
     {
-
         // This method is called when the action is created
         // This method is optional and can be removed
         public override void Created()
@@ -41,25 +40,16 @@ namespace NonPlayable.Goap
         public override IActionRunState Perform(IMonoAgent agent, Data data, IActionContext context)
         {
             var stats = data.Stats;
-            stats.fatigue = Mathf.Clamp(
-                stats.fatigue + stats.fatigueRate * context.DeltaTime,
-                0f, 100f
+            stats.hunger = Mathf.Max(
+                0f,
+                stats.hunger - stats.eatRate * context.DeltaTime
             );
 
-            stats.debt = Mathf.Clamp(
-                stats.debt + stats.debtRate * context.DeltaTime,
-                0f, 100f
-                );
-
-            stats.hunger = Mathf.Clamp(
-                stats.hunger + stats.hungerRate * context.DeltaTime,
-                0f, 100f
-                );
-
-            return context.IsInRange
-                ? ActionRunState.Completed
-                : ActionRunState.Continue;
+            return stats.hunger > stats.eatThreshold
+                ? ActionRunState.Continue
+                : ActionRunState.Completed;
         }
+
         // This method is called when the action is completed
         // This method is optional and can be removed
         public override void Complete(IMonoAgent agent, Data data)
