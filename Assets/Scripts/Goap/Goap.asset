@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0857b2a53377458ebec6c4b1179e3c5a, type: 3}
   m_Name: Goap
   m_EditorClassIdentifier: 
-  nameSpace: Storeroom.Goap
+  nameSpace: NonPlayable.Goap
   scripts:
     goals: []
     actions: []

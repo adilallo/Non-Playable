@@ -3,7 +3,7 @@ using CrashKonijn.Agent.Runtime;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Storeroom.Goap
+namespace NonPlayable.Goap
 {
     [RequireComponent(typeof(AgentBehaviour), typeof(NavMeshAgent))]
     public class NavMeshMover : MonoBehaviour, IAgentDistanceObserver

@@ -1,9 +1,9 @@
+using CrashKonijn.Agent.Core;
 using CrashKonijn.Goap.Core;
 using CrashKonijn.Goap.Runtime;
-using Storeroom.Goap.Sensors;
-using UnityEngine;
+using NonPlayable.Goap.Sensors;
 
-namespace Storeroom.Goap.Capabilities
+namespace NonPlayable.Goap.Capabilities
 {
     public class WanderCapabilityFactory : CapabilityFactoryBase
     {
@@ -12,16 +12,30 @@ namespace Storeroom.Goap.Capabilities
             var cap = new CapabilityBuilder("Wander");
 
             cap.AddGoal<WanderGoal>()
-               .AddCondition<IsIdle>(Comparison.GreaterThanOrEqual, 1)
-               .SetBaseCost(1);
+               .AddCondition<Fatigue>(Comparison.GreaterThan, 75)
+               .AddCondition<Debt>(Comparison.GreaterThan, 75)
+               .AddCondition<Hunger>(Comparison.GreaterThan, 75)
+               .SetBaseCost(2);
 
             cap.AddAction<WanderAction>()
-               .AddEffect<IsIdle>(EffectType.Increase)
+                .AddCondition<Fatigue>(Comparison.SmallerThan, 75)
+               .AddCondition<Debt>(Comparison.SmallerThan, 75)
+               .AddCondition<Hunger>(Comparison.SmallerThan, 75)
+               .AddEffect<Fatigue>(EffectType.Increase)
+               .AddEffect<Debt>(EffectType.Increase)
+               .AddEffect<Hunger>(EffectType.Increase)
                .SetTarget<WanderTarget>()
-               .SetStoppingDistance(0.1f);
+               .SetStoppingDistance(0.1f)
+               .SetMoveMode(ActionMoveMode.PerformWhileMoving);
 
             cap.AddTargetSensor<NavMeshWanderTargetSensor>()
                .SetTarget<WanderTarget>();
+
+            cap.AddWorldSensor<FatigueSensor>()
+                .SetKey<Fatigue>();
+
+            cap.AddWorldSensor<DebtSensor>()
+                .SetKey<Debt>();
 
             return cap.Build();
         }

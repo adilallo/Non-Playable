@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 
-namespace Storeroom.Cinemachine
+namespace NonPlayable.Cinemachine
 {
     /// <summary>
     /// Adds a constant horizontal spin to a Cinemachine Camera
