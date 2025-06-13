@@ -1856,14 +1856,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 422920827}
     m_Modifications:
+    - target: {fileID: 1886813008772780598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886813008772780598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886813008772780598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2579949523983359711, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: m_Name
       value: SanguineAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324184776912251622, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: InitializationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5840341646927792629, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: <ActionProviderBase>k__BackingField
       value: 
       objectReference: {fileID: 1242901764}
+    - target: {fileID: 7164995122912475602, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8212899117920126075, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14
@@ -1972,7 +1992,10 @@ PrefabInstance:
       propertyPath: workThreshold
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2933987840204948777, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+    - {fileID: 5290431535923365763, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
+    - {fileID: 1886813008772780598, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8212899117920126075, guid: 5d279b84bee97e441920fd0c23af4774, type: 3}
@@ -3839,14 +3862,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1622244826}
     m_Modifications:
-    - target: {fileID: 515546294997070292, guid: 4012ee972862de3468d7fc91f107fc56, type: 3}
-      propertyPath: field of view
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 515546294997070292, guid: 4012ee972862de3468d7fc91f107fc56, type: 3}
-      propertyPath: far clip plane
-      value: 10.01
-      objectReference: {fileID: 0}
     - target: {fileID: 1364940234119146898, guid: 4012ee972862de3468d7fc91f107fc56, type: 3}
       propertyPath: m_Name
       value: SanguineCamera
@@ -3962,10 +3977,6 @@ PrefabInstance:
     - target: {fileID: 6669396291039919370, guid: 4012ee972862de3468d7fc91f107fc56, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.000000004604381
-      objectReference: {fileID: 0}
-    - target: {fileID: 8548782409183883359, guid: 4012ee972862de3468d7fc91f107fc56, type: 3}
-      propertyPath: m_VolumeLayerMask.m_Bits
-      value: 257
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
