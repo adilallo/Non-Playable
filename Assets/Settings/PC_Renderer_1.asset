@@ -16,24 +16,24 @@ MonoBehaviour:
   settings:
     intensity: 1
     quality: 1
-    angle: -31
-    aperture: 1.18
-    offset: 0.24
-    blurCurve: 1
+    angle: -10
+    aperture: 1.24
+    offset: 0.23
+    blurCurve: 1.08
     blur: 1
-    distortion: 2
+    distortion: 1
     distortionScale: 1
     debugView: 0
     focusedBrightness: 0
     focusedContrast: 1
     focusedGamma: 1
     focusedHue: 0
-    focusedSaturation: 1
+    focusedSaturation: 1.1
     unfocusedBrightness: 0
     unfocusedContrast: 1
     unfocusedGamma: 1
     unfocusedHue: 0
-    unfocusedSaturation: 1
+    unfocusedSaturation: 0.9
     brightness: 0
     contrast: 1
     gamma: 1
@@ -113,8 +113,8 @@ MonoBehaviour:
     AfterOpaque: 0
     Source: 1
     NormalSamples: 1
-    Intensity: 0.4
-    DirectLightingStrength: 0.25
+    Intensity: 0.8
+    DirectLightingStrength: 1
     Radius: 0.3
     Samples: 1
     BlurQuality: 0

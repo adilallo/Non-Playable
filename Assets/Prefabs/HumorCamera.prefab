@@ -94,7 +94,7 @@ MonoBehaviour:
     FieldOfView: 46.6
     OrthographicSize: 5
     NearClipPlane: 0.3
-    FarClipPlane: 10.11
+    FarClipPlane: 10.01
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -224,8 +224,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 10.11
-  field of view: 46.6
+  far clip plane: 10.01
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_AllowHDROutput: 1
