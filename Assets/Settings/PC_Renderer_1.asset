@@ -20,7 +20,7 @@ MonoBehaviour:
     aperture: 1.24
     offset: 0.23
     blurCurve: 1.08
-    blur: 1
+    blur: 0.53
     distortion: 1
     distortionScale: 1
     debugView: 0
