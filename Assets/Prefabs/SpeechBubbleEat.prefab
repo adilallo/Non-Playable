@@ -136,8 +136,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3338605515771912624, guid: 90ccaaaa8031f884d8bd92469b3e1914, type: 3}
+      propertyPath: managedReferences[1543062630025658373].DeclaredDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338605515771912624, guid: 90ccaaaa8031f884d8bd92469b3e1914, type: 3}
+      propertyPath: managedReferences[1543062630025658373].AnimateScaleTarget
+      value: 
+      objectReference: {fileID: 4786508462039222657}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90ccaaaa8031f884d8bd92469b3e1914, type: 3}
+--- !u!224 &4786508462039222657 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224000012334511288, guid: 90ccaaaa8031f884d8bd92469b3e1914, type: 3}
+  m_PrefabInstance: {fileID: 4717193801831972153}
+  m_PrefabAsset: {fileID: 0}
