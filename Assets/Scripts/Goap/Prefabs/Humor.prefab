@@ -2822,6 +2822,10 @@ PrefabInstance:
       value: Walking
       objectReference: {fileID: 0}
     - target: {fileID: 7394809284566852930, guid: 84325e11a7547194fb4ee743104ef34f, type: 3}
+      propertyPath: managedReferences[1543062691516514389].LayerName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394809284566852930, guid: 84325e11a7547194fb4ee743104ef34f, type: 3}
       propertyPath: managedReferences[1543062691516514389].StateName
       value: Walking
       objectReference: {fileID: 0}
@@ -3527,6 +3531,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7394809284566852930, guid: 84325e11a7547194fb4ee743104ef34f, type: 3}
       propertyPath: managedReferences[1543062691516514385].Timing.UseIntensityInterval
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394809284566852930, guid: 84325e11a7547194fb4ee743104ef34f, type: 3}
+      propertyPath: managedReferences[1543062691516514389].RandomStateNames.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7394809284566852930, guid: 84325e11a7547194fb4ee743104ef34f, type: 3}
@@ -4242,6 +4250,10 @@ PrefabInstance:
       value: Laying
       objectReference: {fileID: 0}
     - target: {fileID: 2003511257163453583, guid: a2c1b6df961f8974e94fe75385954830, type: 3}
+      propertyPath: managedReferences[1543062691516514391].LayerName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003511257163453583, guid: a2c1b6df961f8974e94fe75385954830, type: 3}
       propertyPath: managedReferences[1543062691516514391].StateName
       value: Laying
       objectReference: {fileID: 0}
@@ -4907,6 +4919,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2003511257163453583, guid: a2c1b6df961f8974e94fe75385954830, type: 3}
       propertyPath: managedReferences[1543062691516514387].Timing.UseIntensityInterval
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003511257163453583, guid: a2c1b6df961f8974e94fe75385954830, type: 3}
+      propertyPath: managedReferences[1543062691516514391].RandomStateNames.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2003511257163453583, guid: a2c1b6df961f8974e94fe75385954830, type: 3}
@@ -5636,6 +5652,10 @@ PrefabInstance:
       value: Standing
       objectReference: {fileID: 0}
     - target: {fileID: 6283858921561576937, guid: e70ecf79ca936ea42bdd8953804ab7d4, type: 3}
+      propertyPath: managedReferences[1543062691516514390].LayerName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283858921561576937, guid: e70ecf79ca936ea42bdd8953804ab7d4, type: 3}
       propertyPath: managedReferences[1543062691516514390].StateName
       value: Standing
       objectReference: {fileID: 0}
@@ -5961,6 +5981,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6283858921561576937, guid: e70ecf79ca936ea42bdd8953804ab7d4, type: 3}
       propertyPath: managedReferences[1543062691516514386].Timing.UseIntensityInterval
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283858921561576937, guid: e70ecf79ca936ea42bdd8953804ab7d4, type: 3}
+      propertyPath: managedReferences[1543062691516514390].RandomStateNames.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6283858921561576937, guid: e70ecf79ca936ea42bdd8953804ab7d4, type: 3}
@@ -6381,6 +6405,10 @@ PrefabInstance:
       value: Standing
       objectReference: {fileID: 0}
     - target: {fileID: 6283858921561576937, guid: eb586fa1664d29742b1d82ee0d72d4dd, type: 3}
+      propertyPath: managedReferences[1543062691516514394].LayerName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283858921561576937, guid: eb586fa1664d29742b1d82ee0d72d4dd, type: 3}
       propertyPath: managedReferences[1543062691516514394].StateName
       value: Standing
       objectReference: {fileID: 0}
@@ -6706,6 +6734,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6283858921561576937, guid: eb586fa1664d29742b1d82ee0d72d4dd, type: 3}
       propertyPath: managedReferences[1543062691516514388].Timing.UseIntensityInterval
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283858921561576937, guid: eb586fa1664d29742b1d82ee0d72d4dd, type: 3}
+      propertyPath: managedReferences[1543062691516514394].RandomStateNames.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6283858921561576937, guid: eb586fa1664d29742b1d82ee0d72d4dd, type: 3}
@@ -7143,7 +7175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6725612863224841350, guid: 6d01095b9b5cff54dacf080b19868147, type: 3}
       propertyPath: m_Color.a
-      value: 0.09411765
+      value: 0.047058824
       objectReference: {fileID: 0}
     - target: {fileID: 6725612863224841350, guid: 6d01095b9b5cff54dacf080b19868147, type: 3}
       propertyPath: m_Color.b
