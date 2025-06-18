@@ -1,14 +1,12 @@
-﻿using UnityEngine;
+﻿using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
-using CrashKonijn.Agent.Runtime;
-using CrashKonijn.Agent.Core;
-using UnityEngine.UI;
 using NonPlayable.LLM;
-using System.Collections.Generic;
-using System.Threading;
 using System;
-using UnityEngine.Events;
 using System.Collections;
+using System.Threading;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
 
 namespace NonPlayable.Goap
 {
@@ -17,7 +15,7 @@ namespace NonPlayable.Goap
         [Header("Thinking")]
         [SerializeField] private LLMPromptTable _prompts;
         [SerializeField] private LLMSentenceLimiter _limiter;
-        [SerializeField] private Text _thoughtText;
+        [SerializeField] private TextMeshProUGUI _thoughtText;
 
         [Header("Throttle")]
         [Tooltip("Seconds before the SAME Action can trigger another thought after the first one")]
