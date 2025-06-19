@@ -5,14 +5,14 @@ using UnityEngine.AI;
 
 namespace NonPlayable.Goap
 {
-    [RequireComponent(typeof(AgentBehaviour), typeof(NavMeshAgent))]
+    [RequireComponent(typeof(AgentBehaviour))]
     public class NavMeshMover : MonoBehaviour, IAgentDistanceObserver
     {
-        NavMeshAgent nav; AgentBehaviour agent;
+        [SerializeField] public NavMeshAgent nav; 
+        AgentBehaviour agent;
 
         void Awake()
         {
-            nav = GetComponent<NavMeshAgent>();
             agent = GetComponent<AgentBehaviour>();
             agent.DistanceObserver = this;
         }
@@ -43,12 +43,22 @@ namespace NonPlayable.Goap
 
         private void StopAgent()
         {
+            if (!Application.isPlaying || !nav.isOnNavMesh)
+            {
+                return;
+            }
+
             nav.ResetPath();
             nav.isStopped = true;
         }
 
         private void ResumeAgent()
         {
+            if (!Application.isPlaying || !nav.isOnNavMesh)
+            {
+                return;
+            }
+
             nav.isStopped = false;
         }
     }

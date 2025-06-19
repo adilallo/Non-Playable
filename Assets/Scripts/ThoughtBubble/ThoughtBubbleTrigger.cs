@@ -1,6 +1,5 @@
 using MoreMountains.Feedbacks;
 using NonPlayable.Goap;
-using System.Collections;
 using UnityEngine;
 
 namespace NonPlayable.UI
@@ -10,10 +9,8 @@ namespace NonPlayable.UI
     {
         [SerializeField] public MMF_Player player;
         [SerializeField] public MMF_Player textFXPlayer;
-        [SerializeField] private float _visibleDuration = 8f;
 
         private HumorBrain brain;
-        private Coroutine _hideRoutine;
 
         void Awake()
         {
@@ -25,23 +22,13 @@ namespace NonPlayable.UI
 
         private void HandleThought(HumorBrain b)
         {
-            if (_hideRoutine != null) StopCoroutine(_hideRoutine);
-
+            textFXPlayer.StopFeedbacks();
             player.ResetAllCooldowns();
-            textFXPlayer.ResetAllCooldowns();
+            this.textFXPlayer.ResetAllCooldowns();
             player.Initialization(true);
-            textFXPlayer.Initialization(true);
+            this.textFXPlayer.Initialization(true);
             player.PlayFeedbacks();
-            textFXPlayer.PlayFeedbacks();
-
-            _hideRoutine = StartCoroutine(HideAfterDelay());
-        }
-
-        private IEnumerator HideAfterDelay()
-        {
-            yield return new WaitForSeconds(_visibleDuration);
-            player.StopFeedbacks();
-            _hideRoutine = null;
+            this.textFXPlayer.PlayFeedbacks();
         }
     }
 }
