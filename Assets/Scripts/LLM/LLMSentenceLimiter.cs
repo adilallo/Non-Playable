@@ -25,19 +25,19 @@ namespace NonPlayable.LLM
         [Header("Hard token ceiling (safety)")]
         public int tokenCeiling = 150;
 
-        [Header("Forbidden words (logit‑bias)")]
-        public string[] bannedWords =
-            { "Lacan", "lacan", "Lacanian", "Lacanism" };
+        //[Header("Forbidden words (logit‑bias)")]
+       // public string[] bannedWords =
+        //    { "Lacan", "lacan", "Lacanian", "Lacanism" };
 
-        static readonly Dictionary<string, Task<Dictionary<int, string>>> _biasTasks
-            = new Dictionary<string, Task<Dictionary<int, string>>>();
+        //static readonly Dictionary<string, Task<Dictionary<int, string>>> _biasTasks
+        //    = new Dictionary<string, Task<Dictionary<int, string>>>();
 
         static bool IsServiceReady(LLMCharacter c) =>
     c != null && c.llm != null && c.llm.started && !c.llm.failed;
 
         LLMCharacter npc;
-        CancellationTokenSource _initCts;
-        Task _biasReady;
+        //CancellationTokenSource _initCts;
+        //Task _biasReady;
 
         private void Awake()
         {
@@ -45,10 +45,10 @@ namespace NonPlayable.LLM
             if (npc == null) { enabled = false; return; }
             npc.numPredict = tokenCeiling; 
             npc.stream = false;
-            _initCts = new CancellationTokenSource();
+            //_initCts = new CancellationTokenSource();
 
-            string modelKey = npc.llm?.model ?? "default-model";
-            lock (_biasTasks)
+            //string modelKey = npc.llm?.model ?? "default-model";
+            /*lock (_biasTasks)
             {
                 if (!_biasTasks.TryGetValue(modelKey, out var t))
                     _biasTasks[modelKey] = t = BuildBiasDictionary(_initCts.Token);
@@ -56,12 +56,12 @@ namespace NonPlayable.LLM
                 _biasReady = ApplyBiasAsync(t);  
             }
 
-            _ = ApplyBiasAsync(_biasTasks[modelKey]);
+            _ = ApplyBiasAsync(_biasTasks[modelKey]);*/
         }
 
         void OnDisable()
         {
-            _initCts.Cancel();
+            //_initCts.Cancel();
 
             if (IsServiceReady(npc))
                 npc.CancelRequests();
@@ -69,19 +69,19 @@ namespace NonPlayable.LLM
 
         public async Task<string> ChatLimited(string prompt)
         {
-            await _biasReady;
+           // await _biasReady;
 
             int target = UnityEngine.Random.Range(minSentences, maxSentences + 1);
 
             Task<string> llmTask = npc.Chat(prompt);
 
-            if (await Task.WhenAny(llmTask, Task.Delay(-1, _initCts.Token)) != llmTask)
-                throw new OperationCanceledException();
+           /* if (await Task.WhenAny(llmTask, Task.Delay(-1, _initCts.Token)) != llmTask)
+                throw new OperationCanceledException();*/
 
             return TrimToSentences(await llmTask, target);
         }
 
-        async Task ApplyBiasAsync(Task<Dictionary<int, string>> biasTask)
+       /* async Task ApplyBiasAsync(Task<Dictionary<int, string>> biasTask)
         {
             try
             {
@@ -93,7 +93,7 @@ namespace NonPlayable.LLM
                 Debug.LogWarning($"Bias init failed: {e}");
             }
         }
-
+       
         async Task<Dictionary<int, string>> BuildBiasDictionary(CancellationToken token)
         {
             await global::LLMUnity.LLM.WaitUntilModelSetup();
@@ -122,9 +122,9 @@ namespace NonPlayable.LLM
                     dict[id] = "-100";
 
             return dict;
-        }
+        }*/
 
-        async Task<List<int>> TokensOf(string text, CancellationToken token)
+      /*  async Task<List<int>> TokensOf(string text, CancellationToken token)
         {
             token.ThrowIfCancellationRequested();
             string json = $"{{\"content\":\"{text}\"}}";
@@ -147,7 +147,7 @@ namespace NonPlayable.LLM
 
             yield return "\n" + w;
             yield return "\n" + w.ToLowerInvariant();
-        }
+        }*/
 
         string TrimToSentences(string text, int max)
         {

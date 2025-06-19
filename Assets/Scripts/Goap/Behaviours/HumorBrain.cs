@@ -42,7 +42,7 @@ namespace NonPlayable.Goap
         private GoapActionProvider _provider;
         private GoapBehaviour _goap;
         static GoapBehaviour _cachedGoap;
-        private CancellationTokenSource _cts;
+        //private CancellationTokenSource _cts;
 
         private static int _brainCount;
         private int _brainIndex;
@@ -66,13 +66,13 @@ namespace NonPlayable.Goap
 
         private void OnEnable()
         {
-            _cts = new CancellationTokenSource();
+            //_cts = new CancellationTokenSource();
         }
 
         private void OnDisable() 
         { 
-            _cts.Cancel(); 
-            _cts.Dispose(); 
+            //_cts.Cancel(); 
+            //_cts.Dispose(); 
         }
 
         private void Start()
