@@ -1,4 +1,5 @@
 using CrashKonijn.Agent.Core;
+using CrashKonijn.Goap.Core;
 using CrashKonijn.Goap.Runtime;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace NonPlayable.Goap.Sensors
 {
     public class EatTargetSensor : LocalTargetSensorBase
     {
+        public override ISensorTimer Timer { get; } = SensorTimer.Always;
+
         public override void Created()
         {
         }
@@ -20,13 +23,11 @@ namespace NonPlayable.Goap.Sensors
             if (points == null || points.Length == 0)
                 return previous;
 
-            if (previous == null)
-            {
-                var i = Random.Range(0, points.Length);
-                return new PositionTarget(points[i].position);
-            }
+            int pick = Random.Range(0, points.Length);
+            var pos = points[pick].position;
 
-            return previous;
+            return previous is PositionTarget p ? p.SetPosition(pos)
+                                                : new PositionTarget(pos);
         }
 
         public override void Update()

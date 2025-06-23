@@ -5,71 +5,110 @@ using UnityEngine.AI;
 
 namespace NonPlayable.Goap.Sensors
 {
+    /// <summary>
+    /// Picks the next wander position somewhere on the NavMesh, biased
+    /// toward continuing in roughly the same direction so the agent
+    /// doesn’t ping-pong.
+    /// </summary>
     [GoapId("NavMeshWanderTargetSensor-0af7b2c8-a313-4f18-88f3-40c0702a81d9")]
     public class NavMeshWanderTargetSensor : LocalTargetSensorBase
     {
-        const float Radius = 12f;
-        const int MaxTries = 12;
-        const float SampleDist = 1.5f;
+        // --------------------------------------------------------------------
+        // static data – shared by every instance
+        // --------------------------------------------------------------------
+        private static readonly Bounds NavBounds;
+        private const int MaxTries = 16;          // tries per sample
+        private const float SampleDist = 2f;    // clamp to mesh
+        private const float MinStep = 6f;       // how far at least
+        private const float MaxStep = 32f;      // how far at most
+        private const float DirJitter = 15f;      // deg of allowed turn
 
-        public override void Created()
+        // compute bounds of the baked NavMesh once when the class is first touched
+        static NavMeshWanderTargetSensor()
         {
+            var tri = NavMesh.CalculateTriangulation();
+            if (tri.vertices.Length == 0)
+            {
+                // fallback to a 0-sized bounds around world origin
+                NavBounds = new Bounds(Vector3.zero, Vector3.zero);
+                Debug.LogWarning("[NavMeshWander] Could not read NavMesh triangulation; " +
+                                 "bounds default to (0,0,0). Make sure your NavMesh is baked.");
+                return;
+            }
 
+            var b = new Bounds(tri.vertices[0], Vector3.zero);
+            for (int i = 1; i < tri.vertices.Length; i++)
+                b.Encapsulate(tri.vertices[i]);
+
+            NavBounds = b;
         }
 
+        // --------------------------------------------------------------------
+        // instance methods
+        // --------------------------------------------------------------------
         public override ITarget Sense(IActionReceiver agent,
                                       IComponentReference _,
                                       ITarget previous)
         {
-            var origin = agent.Transform.position;
+            // -------------------------------------------
+            // 1) figure out a preferred direction
+            // -------------------------------------------
+            Vector3 currentPos = agent.Transform.position;
+
+            // If we had a previous wander target, keep the heading with a bit of jitter.
+            Vector3 dir =
+                previous is PositionTarget pt
+                    ? (pt.Position - currentPos).normalized
+                    : Random.insideUnitSphere.WithY(0).normalized;
+
+            // add ±DirJitter degrees of random yaw so we do not walk perfectly straight
+            dir = Quaternion.Euler(0,
+                                   Random.Range(-DirJitter, DirJitter),
+                                   0) * dir;
+
+            // -------------------------------------------
+            // 2) try a few distances along that direction
+            // -------------------------------------------
             for (int i = 0; i < MaxTries; i++)
             {
-                // pick a random point in XZ circle
-                var p2D = Random.insideUnitCircle * Radius;
-                var guess = origin + new Vector3(p2D.x, 0, p2D.y);
+                float step = Random.Range(MinStep, MaxStep);
+                Vector3 guess = currentPos + dir * step;
 
-                // snap to navmesh
+                // clamp guess into NavMesh bounding box
+                guess = NavBounds.Contains(guess) ? guess : NavBounds.ClosestPoint(guess);
+
+                // snap to mesh
                 if (!NavMesh.SamplePosition(guess, out var hit, SampleDist, NavMesh.AllAreas))
                     continue;
 
-                // **ensure there is a complete path**
+                // path test
                 var path = new NavMeshPath();
-                if (NavMesh.CalculatePath(origin, hit.position, NavMesh.AllAreas, path) &&
+                if (NavMesh.CalculatePath(currentPos, hit.position, NavMesh.AllAreas, path) &&
                     path.status == NavMeshPathStatus.PathComplete)
                 {
-                    // Reuse previous instance if possible
-                    if (previous is PositionTarget pt)
-                        return pt.SetPosition(hit.position);
-
-                    return new PositionTarget(hit.position);
+                    // reuse PositionTarget if possible
+                    return previous is PositionTarget prev ? prev.SetPosition(hit.position)
+                                                            : new PositionTarget(hit.position);
                 }
+
+                // failed → pick a fresh random direction next iteration
+                dir = Random.insideUnitSphere.WithY(0).normalized;
             }
 
-            // Fallback: if we have a previous target, keep it; otherwise stay in place
-            if (previous is PositionTarget prevPt)
-                return prevPt;
-
-            return new PositionTarget(origin);
+            // fallback to staying put
+            return previous is PositionTarget pPrev
+                     ? pPrev
+                     : new PositionTarget(currentPos);
         }
 
-        public override void Update()
-        {
+        public override void Created() { }
+        public override void Update() { }
+    }
 
-        }
-
-        bool RandomPointOnNavMesh(Vector3 center, float radius, out Vector3 result)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                var rand = center + Random.insideUnitSphere * radius;
-                if (NavMesh.SamplePosition(rand, out var hit, 1.5f, NavMesh.AllAreas))
-                {
-                    result = hit.position;
-                    return true;
-                }
-            }
-            result = center;
-            return false;
-        }
+    // small helper so we can write "Random.insideUnitSphere.WithY(0)"
+    internal static class VecExt
+    {
+        public static Vector3 WithY(this Vector3 v, float y)
+            => new Vector3(v.x, y, v.z);
     }
 }

@@ -111,7 +111,7 @@ namespace NonPlayable.Cinemachine
             InitBoardBounds();
         }
 
-        void LateUpdate()
+        void Update()
         {
             DecideIfWeNeedANewTarget();
             ApplySmoothing();
