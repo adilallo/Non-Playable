@@ -11,15 +11,22 @@ namespace NonPlayable.Goap.Sensors
         }
 
         public override ITarget Sense(IActionReceiver agent,
-                                      IComponentReference _,
+                                      IComponentReference references,
                                       ITarget previous)
         {
-            var pos = agent.Transform.position;
+            var brain = references.GetCachedComponent<HumorBrain>();
+            var points = brain?.EatPoints;
 
-            if (previous is PositionTarget pt)
-                return pt.SetPosition(pos);
+            if (points == null || points.Length == 0)
+                return previous;
 
-            return new PositionTarget(pos);
+            if (previous == null)
+            {
+                var i = Random.Range(0, points.Length);
+                return new PositionTarget(points[i].position);
+            }
+
+            return previous;
         }
 
         public override void Update()

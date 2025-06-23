@@ -4,8 +4,6 @@ using UnityEngine;
 
 namespace NonPlayable.Goap.Sensors
 {
-    /// <summary>Returns the position of the agent's personal RestPoint.</summary>
-    [GoapId("RestTargetSensor-3c3f0e68-e7d5-4bcf-a0d4-f48d5e2d7b3")]
     public class RestTargetSensor : LocalTargetSensorBase
     {
         public override void Created()
@@ -13,19 +11,22 @@ namespace NonPlayable.Goap.Sensors
         }
 
         public override ITarget Sense(IActionReceiver agent,
-                                      IComponentReference _,
+                                      IComponentReference references,
                                       ITarget previous)
         {
-            var brain = agent.Transform.GetComponent<HumorBrain>();
-            if (brain == null || brain.RestPoint == null)
+            var brain = references.GetCachedComponent<HumorBrain>();
+            var points = brain?.RestPoints;
+
+            if (points == null || points.Length == 0)
                 return previous;
 
-            var pos = brain.RestPoint.transform.position;
+            if (previous == null)
+            {
+                var i = Random.Range(0, points.Length);
+                return new PositionTarget(points[i].position);
+            }
 
-            if (previous is PositionTarget pt)
-                return pt.SetPosition(pos);
-
-            return new PositionTarget(pos);
+            return previous;
         }
 
         public override void Update()

@@ -27,12 +27,16 @@ namespace NonPlayable.Goap
         public Camera MyCamera => myCamera;
 
         [Header("Rest")]
-        [SerializeField] private Transform _restPoint;
-        public Transform RestPoint => _restPoint;
+        [SerializeField] private Transform[] _restPoints;
+        public Transform[] RestPoints => _restPoints;
 
         [Header("Work")]
-        [SerializeField] private Transform _workPoint;
-        public Transform WorkPoint => _workPoint;
+        [SerializeField] private Transform[] _workPoints;
+        public Transform[] WorkPoints => _workPoints;
+
+        [Header("Eat")]
+        [SerializeField] private Transform[] _eatPoints;
+        public Transform[] EatPoints => _eatPoints;
 
         [Serializable] public class ThoughtEvent : UnityEvent<HumorBrain> { }
         public ThoughtEvent OnThoughtReady = new ThoughtEvent();
@@ -42,7 +46,6 @@ namespace NonPlayable.Goap
         private GoapActionProvider _provider;
         private GoapBehaviour _goap;
         static GoapBehaviour _cachedGoap;
-        //private CancellationTokenSource _cts;
 
         private static int _brainCount;
         private int _brainIndex;
@@ -66,13 +69,10 @@ namespace NonPlayable.Goap
 
         private void OnEnable()
         {
-            //_cts = new CancellationTokenSource();
         }
 
         private void OnDisable() 
         { 
-            //_cts.Cancel(); 
-            //_cts.Dispose(); 
         }
 
         private void Start()

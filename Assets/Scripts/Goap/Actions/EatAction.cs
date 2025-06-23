@@ -73,7 +73,10 @@ namespace NonPlayable.Goap
         public class Data : IActionData
         {
             public ITarget Target { get; set; }
-            [GetComponent] public DataBehaviour Stats { get; set; }
+            [GetComponent] 
+            public DataBehaviour Stats { get; set; }
+            [GetComponent]
+            public HumorBrain Brain { get; set; }
         }
     }
 }
