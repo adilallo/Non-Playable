@@ -102,6 +102,7 @@ namespace NonPlayable.Cinemachine
             GameObject dummy = new GameObject("AutoExploreTarget");
             _followTarget = dummy.transform;
             _vcam.Follow = _followTarget;
+            _vcam.LookAt = _followTarget;
 
             // seed targets
             _targetRadius = Mathf.Lerp(MinRadius, MaxRadius, 0.5f);
