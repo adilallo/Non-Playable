@@ -24,7 +24,17 @@ namespace NonPlayable.Cinemachine
         [Tooltip("Transform at board centre used for wide pull-outs")]
         public Transform BoardCentre;
 
+        [Header("Wide shot")]
         [Range(0f, 1f)] public float WideShotBias = 0.1f;
+
+        [Tooltip("Radius of the wide shot)")]
+        [Range(70f, 120f)] public float WideShotRadius = 30f;  
+
+        [Tooltip("How long (sec) the pano shot holds in addition to DwellTime.y")]
+        public float WideShotHoldExtra = 2f;
+
+        [Range(-10f, 60f)]
+        public float WidePitchDeg = 25f;      
 
         [Header("Baseline Orbit")]
         public float MinRadius = 8f;
@@ -100,6 +110,7 @@ namespace NonPlayable.Cinemachine
             _targetFocus = Vector3.zero;
 
             _orbit.Radius = _targetRadius;
+            _orbit.RadialAxis.Range = new Vector2(0f, MaxRadius * 5f);
             _orbit.TargetOffset = new Vector3(0f, _targetHeight, 0f);
             _orbit.VerticalAxis.Range = new Vector2(MinVerticalDeg, MaxVerticalDeg);
 
@@ -121,36 +132,11 @@ namespace NonPlayable.Cinemachine
         // ───── Bounds detection ─────────────────────────────────────
         void InitBoardBounds()
         {
-            // 1) Terrain tiles
-            if (DeriveFromTerrain && GroundRoot != null)
-            {
-                Terrain[] terrains = GroundRoot.GetComponentsInChildren<Terrain>();
-                if (terrains.Length > 0)
-                {
-                    float minX = float.PositiveInfinity, minZ = float.PositiveInfinity;
-                    float maxX = float.NegativeInfinity, maxZ = float.NegativeInfinity;
-
-                    foreach (Terrain t in terrains)
-                    {
-                        Vector3 pos = t.transform.position;
-                        Vector3 size = t.terrainData.size;
-                        minX = Mathf.Min(minX, pos.x);
-                        minZ = Mathf.Min(minZ, pos.z);
-                        maxX = Mathf.Max(maxX, pos.x + size.x);
-                        maxZ = Mathf.Max(maxZ, pos.z + size.z);
-                    }
-
-                    _boardMin = new(minX, minZ);
-                    _boardMax = new(maxX, maxZ);
-                    return;
-                }
-            }
-
-            // 2) NavMesh
+            // 1) Use NavMesh triangulation if requested and available
             if (DeriveFromNavMesh)
             {
                 NavMeshTriangulation tri = NavMesh.CalculateTriangulation();
-                if (tri.vertices.Length > 0)
+                if (tri.vertices != null && tri.vertices.Length > 0)
                 {
                     float minX = tri.vertices[0].x, maxX = tri.vertices[0].x;
                     float minZ = tri.vertices[0].z, maxZ = tri.vertices[0].z;
@@ -169,39 +155,69 @@ namespace NonPlayable.Cinemachine
                 }
             }
 
-            // 3) Fallback 80×80 centred at origin
-            _boardMin = new(-40f, -40f);
-            _boardMax = new(40f, 40f);
+            // 2) Fallback: union of all mesh renderers under GroundRoot
+            if (GroundRoot != null)
+            {
+                MeshRenderer[] mrs = GroundRoot.GetComponentsInChildren<MeshRenderer>();
+                if (mrs.Length > 0)
+                {
+                    Bounds b = mrs[0].bounds;
+                    for (int i = 1; i < mrs.Length; i++)
+                        b.Encapsulate(mrs[i].bounds);
+
+                    _boardMin = new(b.min.x, b.min.z);
+                    _boardMax = new(b.max.x, b.max.z);
+                    return;
+                }
+            }
+
+            // 3) Last-ditch hard-coded rectangle
+            _boardMin = new(-35f, -35f);
+            _boardMax = new(35f, 35f);
         }
 
         // ───── Decision logic ───────────────────────────────────────
         void DecideIfWeNeedANewTarget()
         {
-            if (Time.time < _nextDecisionTime && _nextInterest == null) return;
+            if (Time.time < _nextDecisionTime && _nextInterest == null) { return; }
 
-            _targetFocus = _nextInterest ?? PickNextFocus();
+            // PickFocus will optionally set radius/height/vertical when it decides on a pano.
+            bool isPano = false;
+            _targetFocus = _nextInterest ?? PickNextFocus(out isPano);
             _nextInterest = null;
-            _targetHeight = Random.Range(MinHeight, MaxHeight);
-            _targetRadius = Random.Range(MinRadius, MaxRadius);
-            _targetHeading = Random.Range(0f, 360f);
-            _targetVertical = Random.Range(MinVerticalDeg, MaxVerticalDeg);
 
+            if (!isPano)
+            {
+                _targetHeight = Random.Range(MinHeight, MaxHeight);
+                _targetRadius = Random.Range(MinRadius, MaxRadius);
+                _targetVertical = Random.Range(MinVerticalDeg, MaxVerticalDeg);
+            }
+            _targetHeading = Random.Range(0f, 360f);
             _nextDecisionTime = Time.time + Random.Range(DwellTime.x, DwellTime.y);
         }
 
-        Vector3 PickNextFocus()
+        Vector3 PickNextFocus(out bool panoChosen)
         {
             // 1) Wide pull-out?
             if (BoardCentre != null && Random.value < WideShotBias)
             {
-                _targetRadius = MaxRadius;
-                _targetHeight = MaxHeight;
-                _targetVertical = MaxVerticalDeg;          // optional: camera tilts up for the vista
-                _nextDecisionTime = Time.time + DwellTime.y;   // hold the shot to max dwell
-                return BoardCentre.position;
+                panoChosen = true;
+
+                // hard-coded values:
+                _targetRadius = WideShotRadius;                      
+                _targetVertical = WidePitchDeg;                      
+                _targetHeight = _targetRadius * Mathf.Sin(     
+                                     _targetVertical * Mathf.Deg2Rad);
+
+                _targetHeading = Random.Range(0f, 360f);      
+                _nextDecisionTime = Time.time + DwellTime.y + WideShotHoldExtra;  
+
+                return BoardCentre.position;                
             }
 
             // 2) Choose one of the supplied POIs (agents or other)
+            panoChosen = false;
+
             if (PointsOfInterest != null && PointsOfInterest.Length > 0)
             {
                 int safety = 8;
@@ -217,6 +233,7 @@ namespace NonPlayable.Cinemachine
             }
 
             // 3) Fallback: stay where we are (no random board spots)
+            panoChosen = false;
             return _followTarget.position;
         }
 
