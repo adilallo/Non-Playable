@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 133327332036724340}
   - component: {fileID: 1592085283686636285}
   - component: {fileID: 1592085283686636284}
+  - component: {fileID: 1542194924919946303}
   m_Layer: 0
   m_Name: Antler Sprout A1
   m_TagString: Untagged
@@ -27,12 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934666509847226273}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2755459467527500478
 MeshFilter:
@@ -41,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934666509847226273}
-  m_Mesh: {fileID: -2758840525339495919, guid: a537707cf95b5b74fac2232dde0a1745, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &133327332036724340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53,10 +55,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +88,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &1592085283686636285
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -89,8 +97,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934666509847226273}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.28647313
   m_Height: 1.2688187
   m_Direction: 1
@@ -114,3 +131,105 @@ LODGroup:
     renderers:
     - renderer: {fileID: 133327332036724340}
   m_Enabled: 1
+--- !u!114 &1542194924919946303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934666509847226273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd5e5ddd242bd64581fb5ed9c0e0507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PolyMesh:
+    name: Antler Sprout A1
+    vertices:
+    - {x: -0.005969114, y: 0.40363523, z: -0.012249112}
+    - {x: -0.08888399, y: 0.36493552, z: -0.19949847}
+    - {x: 0.022158517, y: -0.12943421, z: 0.049620785}
+    - {x: 0.1226158, y: 0.9149753, z: -0.21608527}
+    - {x: -0.0038191043, y: 0.36504078, z: -0.014846258}
+    - {x: -0.29769114, y: 1.1374408, z: 0.12778401}
+    - {x: -0.14046298, y: 0.9140827, z: -0.21725316}
+    - {x: -0.012091379, y: 0.3650127, z: -0.014882952}
+    - {x: 0.2752551, y: 1.1393845, z: 0.13032769}
+    - {x: -0.005969114, y: 0.40363523, z: -0.012249112}
+    - {x: 0.022158517, y: -0.12943421, z: 0.049620785}
+    - {x: -0.08888399, y: 0.36493552, z: -0.19949847}
+    - {x: 0.1226158, y: 0.9149753, z: -0.21608527}
+    - {x: -0.29769114, y: 1.1374408, z: 0.12778401}
+    - {x: -0.0038191043, y: 0.36504078, z: -0.014846258}
+    - {x: -0.14046298, y: 0.9140827, z: -0.21725316}
+    - {x: 0.2752551, y: 1.1393845, z: 0.13032769}
+    - {x: -0.012091379, y: 0.3650127, z: -0.014882952}
+    normals:
+    - {x: -0.9142728, y: -0.0012249837, z: 0.40509734}
+    - {x: -0.9142728, y: -0.0012249837, z: 0.40509734}
+    - {x: -0.9142728, y: -0.0012249837, z: 0.40509734}
+    - {x: -0.6652132, y: -0.116915956, z: -0.7374429}
+    - {x: -0.6652132, y: -0.116915956, z: -0.7374429}
+    - {x: -0.6652132, y: -0.116915956, z: -0.7374429}
+    - {x: -0.67251253, y: 0.11237748, z: 0.731504}
+    - {x: -0.67251253, y: 0.11237748, z: 0.731504}
+    - {x: -0.67251253, y: 0.11237748, z: 0.731504}
+    - {x: 0.9142728, y: 0.0012249837, z: -0.40509734}
+    - {x: 0.9142728, y: 0.0012249837, z: -0.40509734}
+    - {x: 0.9142728, y: 0.0012249837, z: -0.40509734}
+    - {x: 0.6652132, y: 0.116915956, z: 0.7374429}
+    - {x: 0.6652132, y: 0.116915956, z: 0.7374429}
+    - {x: 0.6652132, y: 0.116915956, z: 0.7374429}
+    - {x: 0.67251253, y: -0.11237748, z: -0.731504}
+    - {x: 0.67251253, y: -0.11237748, z: -0.731504}
+    - {x: 0.67251253, y: -0.11237748, z: -0.731504}
+    colors: []
+    tangents:
+    - {x: -0.39784425, y: -0.18569002, z: -0.89846486, w: -1}
+    - {x: -0.39784428, y: -0.18569003, z: -0.89846486, w: -1}
+    - {x: -0.3978443, y: -0.18569003, z: -0.89846486, w: -1}
+    - {x: 0.21104433, y: 0.91794705, z: -0.3359068, w: -1}
+    - {x: 0.21104436, y: 0.91794705, z: -0.3359069, w: -1}
+    - {x: 0.21104434, y: 0.91794705, z: -0.33590683, w: -1}
+    - {x: -0.2142771, y: 0.9165041, z: -0.33779508, w: -1}
+    - {x: -0.21427706, y: 0.9165041, z: -0.33779505, w: -1}
+    - {x: -0.21427707, y: 0.9165041, z: -0.3377951, w: -1}
+    - {x: -0.39784425, y: -0.18569002, z: -0.89846486, w: 1}
+    - {x: -0.3978443, y: -0.18569003, z: -0.89846486, w: 1}
+    - {x: -0.39784428, y: -0.18569003, z: -0.89846486, w: 1}
+    - {x: 0.21104433, y: 0.91794705, z: -0.3359068, w: 1}
+    - {x: 0.21104434, y: 0.91794705, z: -0.33590683, w: 1}
+    - {x: 0.21104436, y: 0.91794705, z: -0.3359069, w: 1}
+    - {x: -0.2142771, y: 0.9165041, z: -0.33779508, w: 1}
+    - {x: -0.21427707, y: 0.9165041, z: -0.3377951, w: 1}
+    - {x: -0.21427706, y: 0.9165041, z: -0.33779505, w: 1}
+    uv0:
+    - {x: 0.60839844, y: 0.25, z: 0, w: 0}
+    - {x: 0.625, y: 0.25, z: 0, w: 0}
+    - {x: 0.6113281, y: 0.20751953, z: 0, w: 0}
+    - {x: 0.6245117, y: 0.12548828, z: 0, w: 0}
+    - {x: 0.5727539, y: 0.12548828, z: 0, w: 0}
+    - {x: 0.6245117, y: 0.17626953, z: 0, w: 0}
+    - {x: 0.6245117, y: 0.12548828, z: 0, w: 0}
+    - {x: 0.5727539, y: 0.12548828, z: 0, w: 0}
+    - {x: 0.6245117, y: 0.17626953, z: 0, w: 0}
+    - {x: 0.60839844, y: 0.25, z: 0, w: 0}
+    - {x: 0.6113281, y: 0.20751953, z: 0, w: 0}
+    - {x: 0.625, y: 0.25, z: 0, w: 0}
+    - {x: 0.6245117, y: 0.12548828, z: 0, w: 0}
+    - {x: 0.6245117, y: 0.17626953, z: 0, w: 0}
+    - {x: 0.5727539, y: 0.12548828, z: 0, w: 0}
+    - {x: 0.6245117, y: 0.12548828, z: 0, w: 0}
+    - {x: 0.6245117, y: 0.17626953, z: 0, w: 0}
+    - {x: 0.5727539, y: 0.12548828, z: 0, w: 0}
+    uv1: []
+    uv2: []
+    uv3: []
+    m_Triangles: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+    m_SubMeshes:
+    - m_Indexes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+      m_Topology: 0
+    m_Mesh: {fileID: 0}
+  m_SkinMeshRef: {fileID: 0}
+  m_OriginalMeshObject: {fileID: -2758840525339495919, guid: a537707cf95b5b74fac2232dde0a1745, type: 3}
+  m_Mode: 0
