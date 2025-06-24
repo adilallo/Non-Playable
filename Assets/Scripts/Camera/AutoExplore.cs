@@ -51,10 +51,6 @@ namespace NonPlayable.Cinemachine
         [Header("Timing")]
         public Vector2 DwellTime = new(6, 12);
 
-        [Header("Noise")]
-        public float NoiseScale = 0.2f;
-        public float NoiseSpeed = 0.02f;
-
         [Header("Smoothing")]
         public float SmoothTime = 1f;
         // ─────────────────────────────────────────────────────────────
@@ -66,6 +62,7 @@ namespace NonPlayable.Cinemachine
         CinemachineCamera _vcam;
         CinemachineOrbitalFollow _orbit;
         Transform _followTarget;
+        Transform _livePoi;
 
         float _phase;
         float _nextDecisionTime;
@@ -127,7 +124,6 @@ namespace NonPlayable.Cinemachine
         {
             DecideIfWeNeedANewTarget();
             ApplySmoothing();
-            ApplyPerlinDrift();
         }
 
         // ───── Bounds detection ─────────────────────────────────────
@@ -203,6 +199,7 @@ namespace NonPlayable.Cinemachine
             if (BoardCentre != null && Random.value < WideShotBias)
             {
                 panoChosen = true;
+                _livePoi = null;
 
                 // hard-coded values:
                 _targetRadius = WideShotRadius;                      
@@ -228,7 +225,11 @@ namespace NonPlayable.Cinemachine
                     if (t != null)
                     {
                         Vector3 pos = ClampToBoard(t.position);
-                        if (InBoard(pos)) return pos;
+                        if (InBoard(pos))
+                        {
+                            _livePoi = t;            // ← remember this agent
+                            return pos;
+                        }
                     }
                 }
             }
@@ -251,6 +252,11 @@ namespace NonPlayable.Cinemachine
         // ───── Motion helpers ───────────────────────────────────────
         void ApplySmoothing()
         {
+            if (_livePoi != null)
+            {
+                _targetFocus = ClampToBoard(_livePoi.position);
+            }
+
             _followTarget.position = Vector3.SmoothDamp(_followTarget.position,
                                                         _targetFocus,
                                                         ref _focusVelocity,
@@ -279,19 +285,6 @@ namespace NonPlayable.Cinemachine
                                                   SmoothTime);
 
             _orbit.VerticalAxis.Value = vertical;
-        }
-
-        void ApplyPerlinDrift()
-        {
-            _phase += NoiseSpeed * Time.deltaTime;
-            float delta = (Mathf.PerlinNoise(_phase, 0f) - 0.5f) * 2f * NoiseScale;
-            _orbit.HorizontalAxis.Value += delta;
-
-            float min = _orbit.HorizontalAxis.Range.x;
-            float max = _orbit.HorizontalAxis.Range.y;
-
-            if (_orbit.HorizontalAxis.Value > max) _orbit.HorizontalAxis.Value = min;
-            else if (_orbit.HorizontalAxis.Value < min) _orbit.HorizontalAxis.Value = max;
         }
     }
 }
