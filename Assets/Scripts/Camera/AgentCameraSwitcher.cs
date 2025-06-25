@@ -1,39 +1,66 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using NonPlayable.Goap;
+using Unity.Cinemachine;
+using System.Collections.Generic;
 
 namespace NonPlayable.Cam
 {
     /// <summary>
-    /// Manages a set of cameras—only one is active at a time.
-    /// Call ShowCamera(index) to pick which one renders.
+    /// Keeps one Cinemachine Virtual Camera active and retargets it
+    /// to whichever HumorBrain fires OnThoughtReady.
+    /// Subscribes/unsubscribes automatically—no manual lists needed.
     /// </summary>
     public class AgentCameraSwitcher : MonoBehaviour
     {
-        [SerializeField] List<HumorBrain> brains;
-        Camera current;
+        [SerializeField] private CinemachineCamera _vcam;
+        [SerializeField] private Transform[] _humorAgents;
 
-        void Awake()
+        private readonly Dictionary<Humor, Transform> _anchorByHumor = new();
+
+        private HumorBrain[] _brains;
+
+        private void Awake()
         {
-            foreach (var b in brains)
+            if (_vcam == null)
             {
-                if (b.MyCamera != null)
-                    b.MyCamera.enabled = false;
+                Debug.LogError($"[{nameof(AgentCameraSwitcher)}] no vcam assigned on {name}", this);
+                enabled = false;
+                return;
+            }
 
-                b.OnThoughtReady.AddListener(OnThoughtReady);
+            for (int i = 0; i < _humorAgents.Length; i++)
+            {
+                if (_humorAgents[i])
+                    _anchorByHumor[(Humor)i] = _humorAgents[i];
             }
         }
 
-        void OnThoughtReady(NonPlayable.Goap.HumorBrain brain)
+        private void OnEnable()
         {
-            var cam = brain.MyCamera;
-            if (cam == null || cam == current) return;
+            _brains = FindObjectsByType<HumorBrain>(FindObjectsSortMode.None);
+            foreach (var brain in _brains)
+                brain.OnThoughtReady.AddListener(HandleThoughtReady);
+        }
 
-            if (current != null)
-                current.enabled = false;
+        private void OnDisable()
+        {
+            if (_brains != null)
+            {
+                foreach (var brain in _brains)
+                    brain.OnThoughtReady.RemoveListener(HandleThoughtReady);
+            }
+        }
 
-            cam.enabled = true;
-            current = cam;
+        private void HandleThoughtReady(HumorBrain brain)
+        {
+            if (!_anchorByHumor.TryGetValue(brain.humor, out var tgt) || tgt == null)
+            {
+                Debug.LogWarning($"No anchor set for humor {brain.humor}", this);
+                return;
+            }
+
+            _vcam.Follow = tgt;
+            _vcam.LookAt = tgt;
         }
     }
 }

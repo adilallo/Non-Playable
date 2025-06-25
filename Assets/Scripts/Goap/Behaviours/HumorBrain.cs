@@ -10,6 +10,14 @@ using UnityEngine.Events;
 
 namespace NonPlayable.Goap
 {
+    public enum Humor
+    {
+        Sanguine,
+        Choleric,
+        Melancholic,
+        Phlegmatic
+    }
+
     public class HumorBrain : MonoBehaviour
     {
         [Header("Thinking")]
@@ -39,6 +47,7 @@ namespace NonPlayable.Goap
         public Transform[] EatPoints => _eatPoints;
 
         [Serializable] public class ThoughtEvent : UnityEvent<HumorBrain> { }
+        public Humor humor;
         public ThoughtEvent OnThoughtReady = new ThoughtEvent();
         public string LastActionId { get; private set; }
 
