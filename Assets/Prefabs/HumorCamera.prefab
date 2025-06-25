@@ -91,15 +91,15 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 46.6
-    OrthographicSize: 5
+    FieldOfView: 60
+    OrthographicSize: 1.66
     NearClipPlane: 0.3
-    FarClipPlane: 10.01
+    FarClipPlane: 500
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
       GateFit: 2
-      SensorSize: {x: 21.946, y: 16.002}
+      SensorSize: {x: 5.79, y: 4.01}
       LensShift: {x: 0, y: 0}
       FocusDistance: 10
       Iso: 200
@@ -128,7 +128,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 3.94, z: -2.23}
+  FollowOffset: {x: 0, y: 2.41, z: -3.88}
 --- !u!114 &8117834394772996458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
       Size: {x: 0.8, y: 0.8}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
-  TargetOffset: {x: 0, y: 0.34, z: 0}
+  TargetOffset: {x: 0, y: 0.63, z: 0}
   Damping: {x: 0.5, y: 0.5}
   Lookahead:
     Enabled: 1
@@ -185,8 +185,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4034578871648484491}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48432714, y: -0.000000010800066, z: 0.0000000059787895, w: 0.874887}
-  m_LocalPosition: {x: 13.79, y: 4.606, z: 10.59}
+  m_LocalRotation: {x: 0.21340467, y: 0.00000002004623, z: -0.00000000437883, w: 0.9769639}
+  m_LocalPosition: {x: 11.16, y: 3.0760002, z: -13.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -210,12 +210,12 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 3.472762
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 5.79, y: 4.01}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -224,14 +224,14 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 10.01
+  far clip plane: 100
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 1.66
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 63
+    m_Bits: 1599
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 1
