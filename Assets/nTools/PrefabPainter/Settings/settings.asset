@@ -647,8 +647,8 @@ MonoBehaviour:
       customPreviewImage: {fileID: 0}
     - name: Plants LOD small
       settings:
-        brushRadius: 6.2
-        brushSpacing: 0.01
+        brushRadius: 0.93
+        brushSpacing: 0.77
         brushOverlapCheckMode: 0
         brushOverlapDistance: 0.5
         brushOverlapCheckObjects: 1
@@ -957,7 +957,7 @@ MonoBehaviour:
       - gameObject: {fileID: 4749557256906062418, guid: d4b16f46bde2c4143aaf7100d73332e9, type: 3}
       - gameObject: {fileID: 5562489573793774005, guid: 9861687f89a574e47885a7fb63964a5a, type: 3}
       selectedSlot: 0
-      selected: 0
+      selected: 1
       colorTag: 0
       customPreviewImage: {fileID: 0}
     - name: Plants LOD big
@@ -1272,7 +1272,7 @@ MonoBehaviour:
       - gameObject: {fileID: 4749557256906062418, guid: d4b16f46bde2c4143aaf7100d73332e9, type: 3}
       - gameObject: {fileID: 5562489573793774005, guid: 9861687f89a574e47885a7fb63964a5a, type: 3}
       selectedSlot: 0
-      selected: 1
+      selected: 0
       colorTag: 0
       customPreviewImage: {fileID: 0}
     levelsGamma: 1
