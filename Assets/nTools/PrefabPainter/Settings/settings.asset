@@ -1,0 +1,397 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0c486dee8904d95a666bbd0aafda94, type: 3}
+  m_Name: settings
+  m_EditorClassIdentifier: 
+  tabs:
+  - name: Plants
+    brushes:
+    - name: Chew Chute A1
+      settings:
+        brushRadius: 1
+        brushSpacing: 0.25
+        brushOverlapCheckMode: 0
+        brushOverlapDistance: 0.5
+        brushOverlapCheckObjects: 1
+        brushOverlapCheckLayers:
+          serializedVersion: 2
+          m_Bits: 0
+        surfaceOffset: 0
+        orientationTransformMode: 0
+        orientationMode: 0
+        alongBrushStroke: 0
+        rotation: {x: 0, y: 0, z: 0}
+        randomizeOrientationX: 0
+        randomizeOrientationY: 100
+        randomizeOrientationZ: 0
+        scaleTransformMode: 0
+        scaleMode: 0
+        scaleUniformMin: 0.6
+        scaleUniformMax: 1
+        scalePerAxisMin: {x: 1, y: 1, z: 1}
+        scalePerAxisMax: {x: 1, y: 1, z: 1}
+        pinFixedRotation: 0
+        pinFixedRotationValue: {x: 0, y: 0, z: 0}
+        pinFixedScale: 0
+        pinFixedScaleValue: {x: 1, y: 1, z: 1}
+        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeScale: 1
+        throwRadius: 1
+        throwSpacing: 1
+        throwHeight: 3
+        throwVelocity: 1
+        throwRandomRotation: {x: 100, y: 100, z: 100}
+        throwScaleMinMax: {x: 1, y: 1}
+        multibrushEnabled: 1
+        multibrushSlots:
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        - enabled: 1
+          raiting: 1
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
+          scale: {x: 1, y: 1, z: 1}
+          pivotMode: 0
+          pivotOffset: {x: 1, y: 1, z: 1}
+        multibrushPaintSelectedSlot: 0
+        multibrushMode: 0
+        multibrushPattern: 0 1 2 3 5 6 7 8 9
+        multibrushPatternContinue: 0
+        slopeEnabled: 0
+        slopeAngleMin: 0
+        slopeAngleMax: 35
+        slopeVector: 1
+        slopeVectorCustom: {x: 0, y: 1, z: 0}
+        slopeVectorFlip: 0
+        gridEnabled: 0
+        gridOrigin: {x: 0, y: 0}
+        gridStep: {x: 5, y: 5}
+        gridPlane: 1
+        gridNormal: {x: 0, y: 1, z: 0}
+        gridAngle: 0
+      prefabSlots:
+      - gameObject: {fileID: 3941655303109803988, guid: 1c878520465d01846bc220a10e67eaa2, type: 3}
+      - gameObject: {fileID: 8603322699240327165, guid: aa4b925f1c775c948a953a6385917775, type: 3}
+      - gameObject: {fileID: 3871579078780502746, guid: c7cdc5b80b5955b459555816448f41eb, type: 3}
+      - gameObject: {fileID: 3013377663773750287, guid: ee3ef5d20eef6854cbef44e074a558c0, type: 3}
+      - gameObject: {fileID: 8274468200787062295, guid: d7a19a9cfc334dd419e4447d2833b4a9, type: 3}
+      - gameObject: {fileID: 8099314869722355902, guid: 5a6eb89053acb9a45a122ae4742197db, type: 3}
+      - gameObject: {fileID: 4391652856299607388, guid: 14704d0a480e470479a90e61fe99038a, type: 3}
+      - gameObject: {fileID: 2842245557527952676, guid: fc4a1f1f2bf678d40a261f32dc55d4ce, type: 3}
+      - gameObject: {fileID: 2657845749062293186, guid: 965b8580a7d687844b37adc99ecc191f, type: 3}
+      - gameObject: {fileID: 5132966449348493704, guid: cdfb09f087b488f419b8d92d365e2f31, type: 3}
+      - gameObject: {fileID: 6813802367181203062, guid: 3e5e877760c973b45b3fb128e6e9308c, type: 3}
+      - gameObject: {fileID: 4924782953667108130, guid: 010498c88f2175644adaf530f049e3e0, type: 3}
+      - gameObject: {fileID: 4276041595177120685, guid: 7022e931f8a0416419c96dec407e497a, type: 3}
+      - gameObject: {fileID: 1380818813130867148, guid: a5208557805e5514a94dc2175a63bb32, type: 3}
+      - gameObject: {fileID: 6584409558356776847, guid: c0fa6ba56b797bc46a1b417be3868121, type: 3}
+      - gameObject: {fileID: 8107780106874484040, guid: 119e31c4fc527164fbe62fe60c48a99d, type: 3}
+      - gameObject: {fileID: 8504805366681573160, guid: bf4e230cb2097e840abd333575128e10, type: 3}
+      - gameObject: {fileID: 7813667793163259703, guid: bca4c0d861e7ebc4c866136b96e81c08, type: 3}
+      - gameObject: {fileID: 7641613750028266990, guid: a317f6c00156d2944854cb4fa39f14e4, type: 3}
+      - gameObject: {fileID: 5431133695133781123, guid: 46619f3fcb038a340b88a8f52801a3bf, type: 3}
+      - gameObject: {fileID: 5296758035170560585, guid: b1ba88eb129696240945aad93f265330, type: 3}
+      - gameObject: {fileID: 3061963243207197897, guid: b88445e738fcfa24c9cbbb8f3885ee25, type: 3}
+      - gameObject: {fileID: 8221398559214080338, guid: 103ff84a056ad4840a363058f4b606c2, type: 3}
+      - gameObject: {fileID: 5234569022880219820, guid: 0693f5855f5a9fd45a04b27c3efa0a6e, type: 3}
+      - gameObject: {fileID: 5776494143975975340, guid: 3c6321322cf4d934b83fbfc33a974264, type: 3}
+      - gameObject: {fileID: 3193659314105204753, guid: 9dd5d3bb94160b943aa2fd5a686e29ca, type: 3}
+      - gameObject: {fileID: 4734213839667759217, guid: 8f1e849b679f7384391f82b2709b3094, type: 3}
+      - gameObject: {fileID: 8809575186725035799, guid: 68e78270829a38d47b0ad635b54c4c76, type: 3}
+      - gameObject: {fileID: 5540066068259640562, guid: fab0fa086b7152c4d9ce46808872a2de, type: 3}
+      - gameObject: {fileID: 2402734332352955348, guid: b977724bd1389d043ad34a7b36bbcbb4, type: 3}
+      - gameObject: {fileID: 6796402956497409509, guid: 3bb80ea9466ab2645b6bb61abc743b93, type: 3}
+      - gameObject: {fileID: 5442683842900205670, guid: ffa760a587ed65b479dcbcdce1ffad48, type: 3}
+      selectedSlot: 10
+      selected: 1
+      colorTag: 0
+      customPreviewImage: {fileID: 0}
+    levelsGamma: 1
+    levelsInBlack: 0
+    levelsInWhite: 255
+    levelsOutBlack: 0
+    levelsOutWhite: 255
+  activeTab: 0
+  paintOnSelected: 0
+  paintLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 1015
+  placeUnder: 1
+  overwritePrefabLayer: 1
+  prefabPlaceLayer: 10
+  pinSnapRotationValue: 15
+  pinSnapScaleValue: 0.1
+  pinSnapRotation: 0
+  pinSnapScale: 0
+  placeAngleStep: 15
+  placeScaleStep: 0.1
+  eraseBrushRadius: 0.9
+  eraseByLayer: 1
+  eraseLayers:
+    serializedVersion: 2
+    m_Bits: 1024
+  selectBrushRadius: 5
+  selectByLayer: 0
+  selectLayers:
+    serializedVersion: 2
+    m_Bits: 32
+  modifyBrushRadius: 5
+  modifyStrength: 1
+  modifyByLayer: 0
+  modifyLayers:
+    serializedVersion: 2
+    m_Bits: 32
+  modifyPivotMode: 3
+  modifyRandomRotation: 0
+  modifyRandomRotationValues: {x: 0, y: 0, z: 0}
+  modifyRotationValues: {x: 0, y: 0, z: 0}
+  modifyScale: 0
+  modifyScaleRandomize: 0
+  orientRotation: {x: 0, y: 0, z: 0}
+  orientLockUp: 1
+  orientPivotMode: 3
+  orientSameDirection: 0
+  orientFlipDirection: 0
+  moveSurfaceOffset: 0
+  movePivotMode: 3
+  moveLockUp: 0
+  moveOrientationMode: 0
+  maxBrushRadius: 20
+  maxBrushSpacing: 5
+  surfaceCoords: 0
+  hideSceneSettingsObject: 1
+  groupPrefabs: 1
+  groupName: _group
+  gridRaycastHeight: 5
+  handlesColor: {r: 1, g: 0, b: 0, a: 1}
+  useAdditionalVertexStreams: 0
+  enableToolsShortcuts: 0
+  disableUndo: 0
+  throwPhysicsTimeStep: 0.02
