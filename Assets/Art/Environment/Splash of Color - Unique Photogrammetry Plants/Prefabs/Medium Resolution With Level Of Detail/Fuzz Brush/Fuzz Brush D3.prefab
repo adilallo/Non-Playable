@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8667723851083734004}
   - component: {fileID: 5757336993890161745}
   - component: {fileID: 7494794862690640027}
-  - component: {fileID: 9206282972905061396}
   - component: {fileID: 9206282972905061403}
   m_Layer: 0
   m_Name: Fuzz Brush D3
@@ -89,27 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9206282972905061396
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8287221757282517326}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.44888914, y: 1.3528905, z: 0.4809686}
-  m_Center: {x: 0.025623143, y: 0.66115975, z: -0.038536847}
 --- !u!205 &9206282972905061403
 LODGroup:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1150330607252999986}
   - component: {fileID: 4060294143947833495}
   - component: {fileID: 2287238495611974749}
-  - component: {fileID: 611490002205829330}
   - component: {fileID: 611490002205829333}
   m_Layer: 0
   m_Name: Filter Fruit C1
@@ -89,29 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &611490002205829330
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341459087657227656}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.27
-  m_Height: 1.191927
-  m_Direction: 1
-  m_Center: {x: -0.09700881, y: 0.55294025, z: 0.01088994}
 --- !u!205 &611490002205829333
 LODGroup:
   m_ObjectHideFlags: 0

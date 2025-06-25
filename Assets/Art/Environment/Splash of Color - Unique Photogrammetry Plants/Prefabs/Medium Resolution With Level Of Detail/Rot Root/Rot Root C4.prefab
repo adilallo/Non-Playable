@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3337668392214351292}
   - component: {fileID: 1872965475872490009}
   - component: {fileID: 4475147997224875731}
-  - component: {fileID: 3016143761928432218}
   - component: {fileID: 3016143761928432219}
   m_Layer: 0
   m_Name: Rot Root C4
@@ -89,29 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3016143761928432218
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2673474705969387270}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.4381479
-  m_Height: 1.5366461
-  m_Direction: 1
-  m_Center: {x: 0.030716851, y: 0.47446716, z: -0.021459877}
 --- !u!205 &3016143761928432219
 LODGroup:
   m_ObjectHideFlags: 0

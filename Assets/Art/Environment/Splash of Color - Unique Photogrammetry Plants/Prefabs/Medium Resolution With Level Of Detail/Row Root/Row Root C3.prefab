@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3954362937804534904}
   - component: {fileID: 94403730312543197}
   - component: {fileID: 2786484590029623063}
-  - component: {fileID: 3560659939073610646}
   - component: {fileID: 3560659939073610647}
   m_Layer: 0
   m_Name: Row Root C3
@@ -89,27 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3560659939073610646
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4443760393180901058}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 1.2489152
-  m_Center: {x: 0.03434372, y: -0.45, z: 0.056603134}
 --- !u!205 &3560659939073610647
 LODGroup:
   m_ObjectHideFlags: 0

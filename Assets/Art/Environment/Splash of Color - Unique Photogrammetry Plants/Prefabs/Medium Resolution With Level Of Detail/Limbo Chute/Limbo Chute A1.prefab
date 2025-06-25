@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 593767942859398003}
   - component: {fileID: 4580907772071711958}
   - component: {fileID: 1762684338060255260}
-  - component: {fileID: 1132591196105571485}
   - component: {fileID: 1132591196105571484}
   m_Layer: 0
   m_Name: Limbo Chute A1
@@ -88,27 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1132591196105571485
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249576361098101193}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.38102925, y: 0.7769064, z: 0.38132817}
-  m_Center: {x: 0.009409405, y: 0.32056862, z: 0.02607213}
 --- !u!205 &1132591196105571484
 LODGroup:
   m_ObjectHideFlags: 0

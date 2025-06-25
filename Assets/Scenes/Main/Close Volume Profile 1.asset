@@ -71,7 +71,7 @@ MonoBehaviour:
     m_Value: 1.1
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 5.28
   scatter:
     m_OverrideState: 1
     m_Value: 0.6
@@ -198,7 +198,7 @@ MonoBehaviour:
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
-    m_Value: 2.49
+    m_Value: 1.79
   aperture:
     m_OverrideState: 1
     m_Value: 1.4
@@ -235,10 +235,10 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.33
+    m_Value: 0.305
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.582
+    m_Value: 0.811
   rounded:
     m_OverrideState: 0
     m_Value: 0

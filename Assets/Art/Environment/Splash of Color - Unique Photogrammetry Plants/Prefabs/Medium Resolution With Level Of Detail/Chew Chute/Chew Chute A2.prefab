@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 730891391777197394}
   - component: {fileID: 4434777124943577847}
   - component: {fileID: 1904891824592041533}
-  - component: {fileID: 985756860465818294}
   - component: {fileID: 985756860465818293}
   m_Layer: 0
   m_Name: Chew Chute A2
@@ -89,27 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &985756860465818294
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103430464692623336}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.4885577
-  m_Center: {x: -0.006747514, y: -0.22, z: 0.028966248}
 --- !u!205 &985756860465818293
 LODGroup:
   m_ObjectHideFlags: 0

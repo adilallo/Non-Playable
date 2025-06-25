@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6651124801340917422}
   - component: {fileID: 7773865318395955467}
   - component: {fileID: 5478248619434360257}
-  - component: {fileID: 6613311451673796936}
   - component: {fileID: 6613311451673796937}
   m_Layer: 0
   m_Name: Sheen Stalk D2
@@ -89,29 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6613311451673796936
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6270798934386875412}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.16
-  m_Height: 0.79842967
-  m_Direction: 1
-  m_Center: {x: -0.005191393, y: 0.27, z: -0.027235404}
 --- !u!205 &6613311451673796937
 LODGroup:
   m_ObjectHideFlags: 0
