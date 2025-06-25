@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4843215337314785212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6f7b9dd354e3c44b2f19d9f06a566a, type: 3}
+  m_Name: FSRRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  IsEnabled: 0
 --- !u!114 &-3992766387989263498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +82,8 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: 7833122117494664109}
   - {fileID: -3992766387989263498}
-  m_RendererFeatureMap: ad6b866f10d7b46c76cbc7ec1fd896c8
+  - {fileID: -4843215337314785212}
+  m_RendererFeatureMap: ad6b866f10d7b46c76cbc7ec1fd896c844e8a0a84f71c9bc
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ff6f7b9dd354e3c44b2f19d9f06a566a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Runtime/URP/FSRScriptableRenderFeature.cs
+  uploadId: 756936

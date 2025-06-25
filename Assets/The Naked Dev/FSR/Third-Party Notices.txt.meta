@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d837cb511dfcd174d8c3b51da77e8dbd
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Third-Party Notices.txt
+  uploadId: 756936

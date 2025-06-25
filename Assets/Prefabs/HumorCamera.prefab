@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 515546294997070292}
   - component: {fileID: 8548782409183883359}
   - component: {fileID: 6074865151238210632}
+  - component: {fileID: 4444656189278741630}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -185,8 +186,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4034578871648484491}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21340467, y: 0.00000002004623, z: -0.00000000437883, w: 0.9769639}
-  m_LocalPosition: {x: 11.16, y: 3.0760002, z: -13.05}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14, y: 1, z: 9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -224,7 +225,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 100
+  far clip plane: 500
   field of view: 60
   orthographic: 0
   orthographic size: 1.66
@@ -319,3 +320,44 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &4444656189278741630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034578871648484491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf55bce4f122f6419c4180b7128f032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSRQuality: 4
+  antiGhosting: 0
+  sharpening: 1
+  sharpness: 0.5
+  enableFG: 0
+  isFGFrame: 0
+  enableF16: 0
+  enableAutoExposure: 1
+  generateReactiveMask: 1
+  generateTCMask: 0
+  autoReactiveScale: 0.9
+  autoReactiveThreshold: 0.05
+  autoReactiveBinaryValue: 0.5
+  autoTcThreshold: 0.05
+  autoTcScale: 1
+  autoTcReactiveScale: 5
+  autoTcReactiveMax: 0.9
+  reactiveFlags: 13
+  mipmapBiasOverride: 1
+  autoTextureUpdate: 1
+  mipMapUpdateFrequency: 2
+  m_mainCamera: {fileID: 0}
+  m_displayWidth: 0
+  m_displayHeight: 0
+  m_resetCamera: 0
+  m_autoHDR: 0
+  m_prevGraphicsFormat: 0
+  m_cameraStacking: 0
+  m_topCamera: {fileID: 0}
