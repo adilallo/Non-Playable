@@ -111,7 +111,7 @@ MonoBehaviour:
     name: Chew Chute B1
   - gameObject: {fileID: 3150825402085929917, guid: a40493b5562b6f34ea0f92716aa890b5, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 63.361214
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -127,7 +127,7 @@ MonoBehaviour:
     name: Filter Fruit B2
   - gameObject: {fileID: 5989101171635429989, guid: 2c68980df2ef0b747895e5c2c1994870, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 55.01901
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -143,7 +143,7 @@ MonoBehaviour:
     name: Filter Fruit D2
   - gameObject: {fileID: 341459087657227656, guid: 3e7bcd05603ea6e4c8395685e75a1004, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 65.05704
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -191,7 +191,7 @@ MonoBehaviour:
     name: Limbo Chute D2
   - gameObject: {fileID: 2420324711326802810, guid: 26024349de4f271449d49be4de79c441, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 58.1559
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -207,7 +207,7 @@ MonoBehaviour:
     name: Padder Pod C1
   - gameObject: {fileID: 7871985530780154828, guid: 5164d720289b5bc48882075d5ce00d93, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 51.88213
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
