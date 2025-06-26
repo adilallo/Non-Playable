@@ -549,7 +549,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4a9ef841ab0d0ed45afc3ba90dd6a788, type: 3}
   m_Controller: {fileID: 9100000, guid: 4c6eda39c5e63ff43845d72e4f4dd429, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -861,6 +861,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7579414534033169785}
     m_Modifications:
+    - target: {fileID: 1603791559424555462, guid: 929cd36d2485bfd4d8c1b2c8e201080c, type: 3}
+      propertyPath: PerformanceMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1603791559424555462, guid: 929cd36d2485bfd4d8c1b2c8e201080c, type: 3}
       propertyPath: StopFeedbacksOnDisable
       value: 1
@@ -1769,6 +1773,10 @@ PrefabInstance:
     - target: {fileID: 5155396469376033655, guid: 84325e11a7547194fb4ee743104ef34f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394809284566852930, guid: 84325e11a7547194fb4ee743104ef34f, type: 3}
+      propertyPath: PerformanceMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7394809284566852930, guid: 84325e11a7547194fb4ee743104ef34f, type: 3}
       propertyPath: FeedbacksList.Array.size
@@ -3214,6 +3222,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1768697959639766047}
     m_Modifications:
+    - target: {fileID: 2003511257163453583, guid: a2c1b6df961f8974e94fe75385954830, type: 3}
+      propertyPath: PerformanceMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2003511257163453583, guid: a2c1b6df961f8974e94fe75385954830, type: 3}
       propertyPath: FeedbacksList.Array.size
       value: 6
@@ -4685,6 +4697,10 @@ PrefabInstance:
       value: Action_Eat
       objectReference: {fileID: 0}
     - target: {fileID: 6283858921561576937, guid: e70ecf79ca936ea42bdd8953804ab7d4, type: 3}
+      propertyPath: PerformanceMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283858921561576937, guid: e70ecf79ca936ea42bdd8953804ab7d4, type: 3}
       propertyPath: FeedbacksList.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -5432,6 +5448,10 @@ PrefabInstance:
     - target: {fileID: 322270064741366587, guid: eb586fa1664d29742b1d82ee0d72d4dd, type: 3}
       propertyPath: m_Name
       value: Action_Work
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283858921561576937, guid: eb586fa1664d29742b1d82ee0d72d4dd, type: 3}
+      propertyPath: PerformanceMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6283858921561576937, guid: eb586fa1664d29742b1d82ee0d72d4dd, type: 3}
       propertyPath: FeedbacksList.Array.size
