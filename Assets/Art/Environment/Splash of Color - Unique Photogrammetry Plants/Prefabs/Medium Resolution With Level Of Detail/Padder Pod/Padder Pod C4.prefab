@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 886573748776918202}
   - component: {fileID: 3146126532047022192}
   - component: {fileID: 4352971794286294256}
+  - component: {fileID: 7854186604225032491}
+  - component: {fileID: 5331494457161419018}
   m_Layer: 0
   m_Name: Padder Pod C4
   m_TagString: Untagged
@@ -111,6 +113,34 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3146126531159905805}
   m_Enabled: 1
+--- !u!114 &7854186604225032491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506532905200880037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: 1067791773
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
+--- !u!114 &5331494457161419018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506532905200880037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6110b0203c3d2ca49805b7cda707117c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gpuiPrefab: {fileID: 7854186604225032491}
 --- !u!1001 &4352971793931520649
 PrefabInstance:
   m_ObjectHideFlags: 0

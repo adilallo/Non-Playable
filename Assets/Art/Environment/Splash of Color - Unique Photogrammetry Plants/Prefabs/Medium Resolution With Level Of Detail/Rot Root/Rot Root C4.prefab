@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1872965475872490009}
   - component: {fileID: 4475147997224875731}
   - component: {fileID: 3016143761928432219}
+  - component: {fileID: 800956963763671171}
   m_Layer: 0
   m_Name: Rot Root C4
   m_TagString: Untagged
@@ -111,6 +112,21 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4475147996934360630}
   m_Enabled: 1
+--- !u!114 &800956963763671171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673474705969387270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: 1990343240
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
 --- !u!1001 &3016143761105244850
 PrefabInstance:
   m_ObjectHideFlags: 0

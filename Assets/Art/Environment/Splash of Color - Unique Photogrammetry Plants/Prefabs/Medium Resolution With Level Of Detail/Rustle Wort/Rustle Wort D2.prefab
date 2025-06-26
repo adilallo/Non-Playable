@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7132678735696125599}
   - component: {fileID: 4978917185104030293}
   - component: {fileID: 5969872519423080157}
+  - component: {fileID: 6194808377536340138}
   m_Layer: 0
   m_Name: Rustle Wort D2
   m_TagString: Untagged
@@ -111,6 +112,21 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4978917185199829984}
   m_Enabled: 1
+--- !u!114 &6194808377536340138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780264608194694016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: -1503324141
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
 --- !u!1001 &5969872519502425956
 PrefabInstance:
   m_ObjectHideFlags: 0

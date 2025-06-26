@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7665057992730381899}
   - component: {fileID: 5601130948761909889}
   - component: {fileID: 6519702949596554761}
+  - component: {fileID: 912361727054571047}
   m_Layer: 0
   m_Name: Sheen Stalk B1
   m_TagString: Untagged
@@ -111,6 +112,21 @@ LODGroup:
     renderers:
     - renderer: {fileID: 5601130948365486531}
   m_Enabled: 1
+--- !u!114 &912361727054571047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6249811678394440532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: 1655842328
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
 --- !u!1001 &6519702949724624199
 PrefabInstance:
   m_ObjectHideFlags: 0

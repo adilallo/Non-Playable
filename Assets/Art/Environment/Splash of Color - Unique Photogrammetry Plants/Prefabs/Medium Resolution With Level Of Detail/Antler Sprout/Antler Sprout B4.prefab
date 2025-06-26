@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1896693898907364576}
   - component: {fileID: 4446915699756423210}
   - component: {fileID: 3059927551954928802}
+  - component: {fileID: 1853563953762073795}
+  - component: {fileID: 7917098919144406818}
   m_Layer: 0
   m_Name: Antler Sprout B4
   m_TagString: Untagged
@@ -111,6 +113,34 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4446915699172370285}
   m_Enabled: 1
+--- !u!114 &1853563953762073795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789524997108496895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: 75555859
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
+--- !u!114 &7917098919144406818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789524997108496895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6110b0203c3d2ca49805b7cda707117c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gpuiPrefab: {fileID: 1853563953762073795}
 --- !u!1001 &3059927551370886121
 PrefabInstance:
   m_ObjectHideFlags: 0

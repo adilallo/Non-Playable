@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 306438801027739725}
   - component: {fileID: 2568256021851489415}
   - component: {fileID: 3775655444842141711}
+  - component: {fileID: 5996935207026067387}
   m_Layer: 0
   m_Name: Foil Leaf D2
   m_TagString: Untagged
@@ -111,6 +112,21 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2568256022263064729}
   m_Enabled: 1
+--- !u!114 &5996935207026067387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4081593108471014738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: -2070863
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
 --- !u!1001 &3775655444733621277
 PrefabInstance:
   m_ObjectHideFlags: 0

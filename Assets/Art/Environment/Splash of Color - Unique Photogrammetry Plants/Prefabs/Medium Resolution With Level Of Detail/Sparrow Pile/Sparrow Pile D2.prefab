@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 9011098195702116173}
   - component: {fileID: 6550816993345018759}
   - component: {fileID: 5559897118875748159}
+  - component: {fileID: 1103373093201045497}
+  - component: {fileID: 2092685907985588319}
   m_Layer: 0
   m_Name: Sparrow Pile D2
   m_TagString: Untagged
@@ -111,6 +113,34 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6550816993511528029}
   m_Enabled: 1
+--- !u!114 &1103373093201045497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4749557256906062418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: -1246363637
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
+--- !u!114 &2092685907985588319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4749557256906062418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6110b0203c3d2ca49805b7cda707117c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gpuiPrefab: {fileID: 1103373093201045497}
 --- !u!1001 &5559897118979279577
 PrefabInstance:
   m_ObjectHideFlags: 0

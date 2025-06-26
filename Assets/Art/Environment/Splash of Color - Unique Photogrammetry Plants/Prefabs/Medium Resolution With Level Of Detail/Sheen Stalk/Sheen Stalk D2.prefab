@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7773865318395955467}
   - component: {fileID: 5478248619434360257}
   - component: {fileID: 6613311451673796937}
+  - component: {fileID: 9011989766369342847}
   m_Layer: 0
   m_Name: Sheen Stalk D2
   m_TagString: Untagged
@@ -111,6 +112,21 @@ LODGroup:
     renderers:
     - renderer: {fileID: 5478248618830663767}
   m_Enabled: 1
+--- !u!114 &9011989766369342847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6270798934386875412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: 921286371
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
 --- !u!1001 &6613311451070172371
 PrefabInstance:
   m_ObjectHideFlags: 0

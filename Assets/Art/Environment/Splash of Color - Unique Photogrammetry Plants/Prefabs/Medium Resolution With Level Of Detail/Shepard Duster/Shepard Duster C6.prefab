@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2561386297651975331}
   - component: {fileID: 319518138054582377}
   - component: {fileID: 1418279480923471073}
+  - component: {fileID: 4268383098331615286}
+  - component: {fileID: 1700631550579437902}
   m_Layer: 0
   m_Name: Shepard Duster C6
   m_TagString: Untagged
@@ -111,6 +113,34 @@ LODGroup:
     renderers:
     - renderer: {fileID: 319518137966552849}
   m_Enabled: 1
+--- !u!114 &4268383098331615286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265262773219230140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: 981127305
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
+--- !u!114 &1700631550579437902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265262773219230140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6110b0203c3d2ca49805b7cda707117c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gpuiPrefab: {fileID: 4268383098331615286}
 --- !u!1001 &1418279480885574549
 PrefabInstance:
   m_ObjectHideFlags: 0

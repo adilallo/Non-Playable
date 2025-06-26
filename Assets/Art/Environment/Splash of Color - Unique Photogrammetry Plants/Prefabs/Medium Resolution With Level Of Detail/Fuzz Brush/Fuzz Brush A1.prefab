@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5416420748045436944}
   - component: {fileID: 7840215756546325722}
   - component: {fileID: 8867481087383674946}
+  - component: {fileID: 1950598856626891028}
   m_Layer: 0
   m_Name: Fuzz Brush A1
   m_TagString: Untagged
@@ -111,6 +112,21 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7840215755380215066}
   m_Enabled: 1
+--- !u!114 &1950598856626891028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8633108843665202447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: -235607741
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
 --- !u!1001 &8867481088415060382
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8101716343563141797}
   - component: {fileID: 6308385700544657007}
   - component: {fileID: 4632646003248114415}
+  - component: {fileID: 4465357225804021652}
   m_Layer: 0
   m_Name: Sickle Wort A1
   m_TagString: Untagged
@@ -111,6 +112,21 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6308385701751036456}
   m_Enabled: 1
+--- !u!114 &4465357225804021652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5515536456001623994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: -894873778
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
 --- !u!1001 &4632646002307008172
 PrefabInstance:
   m_ObjectHideFlags: 0

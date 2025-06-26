@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8457604002474982401}
   - component: {fileID: 5961505102889060555}
   - component: {fileID: 5006332556921214019}
+  - component: {fileID: 5223537041268257928}
+  - component: {fileID: 5692924241420182891}
   m_Layer: 0
   m_Name: Foil Leaf D1
   m_TagString: Untagged
@@ -111,6 +113,34 @@ LODGroup:
     renderers:
     - renderer: {fileID: 5961505103653764124}
   m_Enabled: 1
+--- !u!114 &5223537041268257928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5312973494601787678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c671be8cae081bb4bad571d31fb0eb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabID: -1241135808
+  childOptionalRenderers: []
+  _isRenderersDisabled: 0
+--- !u!114 &5692924241420182891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5312973494601787678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6110b0203c3d2ca49805b7cda707117c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gpuiPrefab: {fileID: 5223537041268257928}
 --- !u!1001 &5006332557669130392
 PrefabInstance:
   m_ObjectHideFlags: 0
