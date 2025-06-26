@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1904891824592041533}
   - component: {fileID: 985756860465818293}
   - component: {fileID: 606625068291893208}
-  - component: {fileID: 8484956339570442743}
   m_Layer: 0
   m_Name: Chew Chute A2
   m_TagString: Untagged
@@ -128,19 +127,6 @@ MonoBehaviour:
   _prefabID: -86399886
   childOptionalRenderers: []
   _isRenderersDisabled: 0
---- !u!114 &8484956339570442743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103430464692623336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6110b0203c3d2ca49805b7cda707117c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gpuiPrefab: {fileID: 606625068291893208}
 --- !u!1001 &985756860899000517
 PrefabInstance:
   m_ObjectHideFlags: 0

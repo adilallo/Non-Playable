@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2786484590029623063}
   - component: {fileID: 3560659939073610647}
   - component: {fileID: 3064740858798196196}
-  - component: {fileID: 2849021613014127918}
   m_Layer: 0
   m_Name: Row Root C3
   m_TagString: Untagged
@@ -128,19 +127,6 @@ MonoBehaviour:
   _prefabID: -591142316
   childOptionalRenderers: []
   _isRenderersDisabled: 0
---- !u!114 &2849021613014127918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4443760393180901058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6110b0203c3d2ca49805b7cda707117c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gpuiPrefab: {fileID: 3064740858798196196}
 --- !u!1001 &3560659939291459854
 PrefabInstance:
   m_ObjectHideFlags: 0

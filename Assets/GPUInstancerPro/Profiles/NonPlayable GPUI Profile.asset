@@ -19,11 +19,11 @@ MonoBehaviour:
   isShadowFrustumCulling: 0
   isShadowOcclusionCulling: 0
   isShadowDistanceCulling: 1
-  isLODCrossFade: 0
+  isLODCrossFade: 1
   isAnimateCrossFade: 1
   minCullingDistance: 0
-  minShadowCullingDistance: 20
-  minMaxDistance: {x: 0.5, y: 1}
+  minShadowCullingDistance: 39.3
+  minMaxDistance: {x: 0.5, y: 130}
   frustumOffset: 0.01
   occlusionOffset: 0.0001
   occlusionOffsetSizeMultiplier: 0
@@ -32,8 +32,8 @@ MonoBehaviour:
   shadowOcclusionOffsetSizeMultiplier: 0.5
   occlusionAccuracy: 2
   boundsOffset: {x: 0, y: 0, z: 0}
-  lodBiasAdjustment: 0.71
-  customShadowDistance: 20
+  lodBiasAdjustment: 1.5
+  customShadowDistance: 50
   shadowLODMap:
   - 0
   - 1

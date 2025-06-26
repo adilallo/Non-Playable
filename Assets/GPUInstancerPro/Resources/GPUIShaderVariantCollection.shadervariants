@@ -21,10 +21,15 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: 6b875a71df7db8a47851841a36cb18d6, type: 3}
     second:
       variants:
+      - keywords: LOD_FADE_CROSSFADE _ALPHATEST_ON _METALLICSPECGLOSSMAP _NORMALMAP
+          _SPECGLOSSMAP _SPECULAR_SETUP
+        passType: 0
       - keywords: _ALPHATEST_ON _METALLICSPECGLOSSMAP _NORMALMAP _SPECGLOSSMAP _SPECULAR_SETUP
         passType: 0
   - first: {fileID: 4800000, guid: d594c653c46230041836e178266af643, type: 3}
     second:
       variants:
+      - keywords: LOD_FADE_CROSSFADE _ALPHATEST_ON
+        passType: 0
       - keywords: _ALPHATEST_ON
         passType: 0

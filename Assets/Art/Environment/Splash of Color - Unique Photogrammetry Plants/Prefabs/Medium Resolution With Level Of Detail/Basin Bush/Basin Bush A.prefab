@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5790599471873022223}
   - component: {fileID: 5160494242256962967}
   - component: {fileID: 5017838533178184097}
-  - component: {fileID: 1577019116557018258}
   m_Layer: 0
   m_Name: Basin Bush A
   m_TagString: Untagged
@@ -128,19 +127,6 @@ MonoBehaviour:
   _prefabID: -215200766
   childOptionalRenderers: []
   _isRenderersDisabled: 0
---- !u!114 &1577019116557018258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5430404341387360474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6110b0203c3d2ca49805b7cda707117c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gpuiPrefab: {fileID: 5017838533178184097}
 --- !u!1001 &5160494241887733082
 PrefabInstance:
   m_ObjectHideFlags: 0
