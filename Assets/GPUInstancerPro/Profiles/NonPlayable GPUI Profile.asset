@@ -33,7 +33,7 @@ MonoBehaviour:
   occlusionAccuracy: 2
   boundsOffset: {x: 0, y: 0, z: 0}
   lodBiasAdjustment: 1.5
-  customShadowDistance: 50
+  customShadowDistance: 40
   shadowLODMap:
   - 0
   - 1

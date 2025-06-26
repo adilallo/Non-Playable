@@ -15,6 +15,6 @@ MonoBehaviour:
   cameraLoadingType: 0
   occlusionCullingCondition: 0
   occlusionCullingMode: 0
-  instancingBoundsSize: {x: 10, y: 10, z: 10}
+  instancingBoundsSize: {x: 160, y: 160, z: 160}
   defaultHDRPShadowDistance: 250
   billboardAssets: []
