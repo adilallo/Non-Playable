@@ -31,9 +31,6 @@ namespace NonPlayable.Goap
         [Tooltip("Spacing between initial fire times")]
         [SerializeField] private float initialOffsetSpacing = 8f;
 
-        [SerializeField] private Camera myCamera;
-        public Camera MyCamera => myCamera;
-
         [Header("Rest")]
         [SerializeField] private Transform[] _restPoints;
         public Transform[] RestPoints => _restPoints;

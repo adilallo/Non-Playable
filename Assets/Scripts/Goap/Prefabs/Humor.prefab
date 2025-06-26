@@ -235,10 +235,10 @@ MonoBehaviour:
   _thoughtText: {fileID: 0}
   minInterval: 24
   initialOffsetSpacing: 8
-  myCamera: {fileID: 0}
   _restPoints: []
   _workPoints: []
   _eatPoints: []
+  humor: 0
   OnThoughtReady:
     m_PersistentCalls:
       m_Calls: []
@@ -550,7 +550,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 4a9ef841ab0d0ed45afc3ba90dd6a788, type: 3}
   m_Controller: {fileID: 9100000, guid: 4c6eda39c5e63ff43845d72e4f4dd429, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
