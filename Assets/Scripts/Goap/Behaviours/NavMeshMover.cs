@@ -1,5 +1,6 @@
 ﻿using CrashKonijn.Agent.Core;
 using CrashKonijn.Agent.Runtime;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,6 +16,18 @@ namespace NonPlayable.Goap
         {
             agent = GetComponent<AgentBehaviour>();
             agent.DistanceObserver = this;
+        }
+
+        IEnumerator Start()
+        {
+            yield return null;
+
+            // if we’re not already on the NavMesh, find the nearest point
+            if (!nav.isOnNavMesh &&
+                NavMesh.SamplePosition(transform.position, out var hit, 5f, NavMesh.AllAreas))
+            {
+                nav.Warp(hit.position);
+            }
         }
         void OnEnable()
         {
