@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3ce00ba677bb7e14bb91772fd68bfe6b
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Runtime/Plugins/Shaders/FSR3/ffx_fsr_unity_common.cginc
+  uploadId: 756936

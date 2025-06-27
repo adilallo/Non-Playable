@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 75cdc6ef23f08ed498d4da511923fcea
+ComputeShaderImporter:
+  externalObjects: {}
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Runtime/Plugins/Shaders/FSR3/ffx_fsr3upscaler_tcr_autogen_pass.compute
+  uploadId: 756936

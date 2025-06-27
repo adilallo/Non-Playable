@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1d5dac22936edca459f0d2ddb418884f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Online Documentation.txt
+  uploadId: 756936

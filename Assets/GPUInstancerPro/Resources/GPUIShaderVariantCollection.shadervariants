@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GPUIShaderVariantCollection
+  m_Shaders:
+  - first: {fileID: 4800000, guid: 8478781d80234fa29651593b02782b9d, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 303b28effad14e94871a6cfad2db6615, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 6b875a71df7db8a47851841a36cb18d6, type: 3}
+    second:
+      variants:
+      - keywords: LOD_FADE_CROSSFADE _ALPHATEST_ON _METALLICSPECGLOSSMAP _NORMALMAP
+          _SPECGLOSSMAP _SPECULAR_SETUP
+        passType: 0
+      - keywords: _ALPHATEST_ON _METALLICSPECGLOSSMAP _NORMALMAP _SPECGLOSSMAP _SPECULAR_SETUP
+        passType: 0
+  - first: {fileID: 4800000, guid: d594c653c46230041836e178266af643, type: 3}
+    second:
+      variants:
+      - keywords: LOD_FADE_CROSSFADE _ALPHATEST_ON
+        passType: 0
+      - keywords: _ALPHATEST_ON
+        passType: 0

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a03671e044126fe4dbe15697b266a8a8
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Editor/com.thenakeddev.fsr.Editor.asmdef
+  uploadId: 756936

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a135306e6d1857e43a86ef20db2a47fe
+ComputeShaderImporter:
+  externalObjects: {}
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Runtime/Plugins/Shaders/FSR3/ffx_fsr3upscaler_luma_instability_pass.compute
+  uploadId: 756936

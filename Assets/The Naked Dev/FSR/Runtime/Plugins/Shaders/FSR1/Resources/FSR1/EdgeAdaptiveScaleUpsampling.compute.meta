@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 650768e94d639c344983ec28779842cf
+ComputeShaderImporter:
+  externalObjects: {}
+  currentAPIMask: 4194308
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Runtime/Plugins/Shaders/FSR1/Resources/FSR1/EdgeAdaptiveScaleUpsampling.compute
+  uploadId: 756936

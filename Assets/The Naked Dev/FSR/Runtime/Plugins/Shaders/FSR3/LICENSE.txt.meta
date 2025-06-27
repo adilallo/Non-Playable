@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a16ae1d633a3033429815ea201dd8e79
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Runtime/Plugins/Shaders/FSR3/LICENSE.txt
+  uploadId: 756936

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6815224e1a496694cb134f15437383d7
+ComputeShaderImporter:
+  externalObjects: {}
+  currentAPIMask: 4194308
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252172
+  packageName: FSR 3 - Upscaling for Unity
+  packageVersion: 1.7.7
+  assetPath: Assets/The Naked Dev/FSR/Runtime/Plugins/Shaders/FSR1/Resources/FSR1/RobustContrastAdaptiveSharpen.compute
+  uploadId: 756936

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1474288054565390872}
   m_Layer: 0
   m_Name: HumorCamera
-  m_TagString: Untagged
+  m_TagString: CloseCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,14 +92,14 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 1.66
     NearClipPlane: 0.3
-    FarClipPlane: 1000
+    FarClipPlane: 500
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
       GateFit: 2
-      SensorSize: {x: 21.946, y: 16.002}
+      SensorSize: {x: 5.79, y: 4.01}
       LensShift: {x: 0, y: 0}
       FocusDistance: 10
       Iso: 200
@@ -124,11 +124,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 0, y: 0, z: 0}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -2.5}
+  FollowOffset: {x: 0, y: 0.5, z: 4}
 --- !u!114 &8117834394772996458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,12 +151,12 @@ MonoBehaviour:
       Size: {x: 0.8, y: 0.8}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
-  TargetOffset: {x: 0, y: 0, z: 0}
+  TargetOffset: {x: 0, y: -1.4, z: 0}
   Damping: {x: 0.5, y: 0.5}
   Lookahead:
     Enabled: 0
-    Time: 0
-    Smoothing: 0
+    Time: 0.14
+    Smoothing: 7.5
     IgnoreY: 0
 --- !u!1 &4034578871648484491
 GameObject:
@@ -170,9 +170,10 @@ GameObject:
   - component: {fileID: 515546294997070292}
   - component: {fileID: 8548782409183883359}
   - component: {fileID: 6074865151238210632}
+  - component: {fileID: 4444656189278741630}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: CloseCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,13 +186,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4034578871648484491}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14, y: 1, z: 9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1474288054565390872}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.04, z: 0}
 --- !u!20 &515546294997070292
 Camera:
   m_ObjectHideFlags: 0
@@ -210,12 +211,12 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 3.472762
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 5.79, y: 4.01}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -224,16 +225,16 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 500
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 1.66
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1567
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: ef2fdd8df8a78c24f8f66b6d6ef6d1a7, type: 2}
   m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
@@ -259,18 +260,19 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
+  m_Cameras:
+  - {fileID: 0}
+  m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 257
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_AllowHDROutput: 1
@@ -304,8 +306,8 @@ MonoBehaviour:
   IgnoreTimeScale: 0
   WorldUpOverride: {fileID: 0}
   ChannelMask: 4
-  UpdateMethod: 2
-  BlendUpdateMethod: 1
+  UpdateMethod: 0
+  BlendUpdateMethod: 0
   LensModeOverride:
     Enabled: 0
     DefaultMode: 2
@@ -319,3 +321,44 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &4444656189278741630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034578871648484491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf55bce4f122f6419c4180b7128f032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSRQuality: 4
+  antiGhosting: 0
+  sharpening: 1
+  sharpness: 0.5
+  enableFG: 0
+  isFGFrame: 0
+  enableF16: 0
+  enableAutoExposure: 1
+  generateReactiveMask: 1
+  generateTCMask: 0
+  autoReactiveScale: 0.9
+  autoReactiveThreshold: 0.05
+  autoReactiveBinaryValue: 0.5
+  autoTcThreshold: 0.05
+  autoTcScale: 1
+  autoTcReactiveScale: 5
+  autoTcReactiveMax: 0.9
+  reactiveFlags: 13
+  mipmapBiasOverride: 1
+  autoTextureUpdate: 1
+  mipMapUpdateFrequency: 2
+  m_mainCamera: {fileID: 0}
+  m_displayWidth: 0
+  m_displayHeight: 0
+  m_resetCamera: 0
+  m_autoHDR: 0
+  m_prevGraphicsFormat: 0
+  m_cameraStacking: 0
+  m_topCamera: {fileID: 0}
